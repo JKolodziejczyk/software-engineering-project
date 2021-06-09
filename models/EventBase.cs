@@ -11,9 +11,9 @@ namespace RPG.models
         public int id { get; }
         public string desc { get; }
         public int[] locations { get; }
-        public Choice[] choices { get; }
+        public ChoiceBase[] choices { get; }
 
-        public EventBase(int id, string desc, int[] locations, Choice[] choices)
+        public EventBase(int id, string desc, int[] locations, ChoiceBase[] choices)
         {
             this.id = id;
             this.desc = desc;

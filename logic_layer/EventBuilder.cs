@@ -13,12 +13,15 @@ namespace RPG.logic_layer
         Location[] _locations;
         EventBase[] _events;
         Buff[] _buffs;
+        Item[] _items;
 
         public Location[] locations { get { return _locations; } }
         
         public EventBase[] events { get { return _events; } }
 
         public Buff[] buffs { get { return _buffs; } }
+
+        public Item[] items { get { return _items; } }
         private EventBuilder() { }
 
         public static EventBuilder instance
@@ -70,20 +73,24 @@ namespace RPG.logic_layer
                     {
                         EventBase curr = _events[id];
                         int idLoc = curr.locations[random.Next(curr.locations.Length - 1)];
-                        Location location = null;
-                        foreach(Location loc in _locations)
-                        {
-                            if(loc.id == idLoc)
-                            {
-                                location = loc;
-                                break;
-                            }
-                        }
+                        Location location = _locations.Single(location => location.id == idLoc);
                         if(location == null)
                         {
                             throw new Exception("Nie znaleziono lokacji!");
                         }
-                        res[i] = new Event(curr.id, curr.desc, location, curr.choices);
+                        Choice[] choices = new Choice[curr.choices.Length];
+                        for(int j = 0; j < choices.Length; j++)
+                        {
+                            ChoiceBase tmp = curr.choices[j];
+                            Item item = null; //TODO: Filtrowac itemy po klasie
+                            if (tmp.item)
+                            {
+                                item = _items[random.Next(_items.Length - 1)];
+                            }
+                            Buff buff = _buffs.Single(buff => buff.id == tmp.buff);
+                            choices[j] = new Choice(tmp.desc, tmp.chance, tmp.win, tmp.lose, tmp.stats, buff, item);
+                        }
+                        res[i] = new Event(curr.id, curr.desc, location, choices);
                         break;
                     }
                 }
