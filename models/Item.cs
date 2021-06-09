@@ -13,9 +13,16 @@ namespace RPG.models
 
     class Weapon: Item
     {
+        
     }
 
-    class Armor : Item { }
+    class Armor : Item
+    {
+        
+    }
 
-    class Lucky : Item { }
+    class Lucky : Item
+    {
+        
+    }
 }
