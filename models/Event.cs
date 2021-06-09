@@ -8,12 +8,14 @@ namespace RPG.models
 {
     public class Event
     {
-        string desc { get; }
-        Location location { get; }
-        Choice[] choices { get; }
+        public int id { get; }
+        public string desc { get; }
+        public Location location { get; }
+        public Choice[] choices { get; }
 
-        Event(string desc, Location location, Choice[] choices)
+        public Event(int id, string desc, Location location, Choice[] choices)
         {
+            this.id = id;
             this.desc = desc;
             this.location = location;
             this.choices = choices;
