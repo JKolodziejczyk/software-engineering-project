@@ -22,7 +22,7 @@ namespace RPG.logic_layer
         public void readData()
         {
             StreamReader file = File.OpenText(PATH);
-            Buff[] buffs = JsonSerializer.Deserialize<Buff[]>(file.ReadToEnd());
+            BuffBase[] buffs = JsonSerializer.Deserialize<BuffBase[]>(file.ReadToEnd());
             eventBuilder.setBuffs(buffs);
         }
     }
