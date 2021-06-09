@@ -10,10 +10,10 @@ namespace RPG.models
     {
         int id { get; }
         string name { get; }
-        string[] desc { get; }
+        string desc { get; }
         string next_event { get; }
 
-        Location(int id, string name, string[] desc, string next_event)
+        Location(int id, string name, string desc, string next_event)
         {
             this.id = id;
             this.name = name;
