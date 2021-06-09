@@ -8,12 +8,12 @@ namespace RPG.models
 {
     public class Location
     {
-        int id { get; }
-        string name { get; }
-        string desc { get; }
-        string next_event { get; }
+        public int id { get; }
+        public string name { get; }
+        public string desc { get; }
+        public string next_event { get; }
 
-        Location(int id, string name, string desc, string next_event)
+        public Location(int id, string name, string desc, string next_event)
         {
             this.id = id;
             this.name = name;

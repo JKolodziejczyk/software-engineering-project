@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG.models
 {
-    class Buff
+    public class Buff
     {
     }
 }
