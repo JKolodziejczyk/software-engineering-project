@@ -12,14 +12,14 @@ namespace RPG.logic_layer
         static EventBuilder _instance;
         Location[] _locations;
         EventBase[] _events;
-        Buff[] _buffs;
+        BuffBase[] _buffs;
         Item[] _items;
 
         public Location[] locations { get { return _locations; } }
         
         public EventBase[] events { get { return _events; } }
 
-        public Buff[] buffs { get { return _buffs; } }
+        public BuffBase[] buffs { get { return _buffs; } }
 
         public Item[] items { get { return _items; } }
         private EventBuilder() { }
@@ -46,7 +46,7 @@ namespace RPG.logic_layer
             _events = events;
         }
 
-        public void setBuffs(Buff[] buffs)
+        public void setBuffs(BuffBase[] buffs)
         {
             _buffs = buffs;
         }
@@ -87,8 +87,8 @@ namespace RPG.logic_layer
                             {
                                 item = _items[random.Next(_items.Length - 1)];
                             }
-                            Buff buff = _buffs.Single(buff => buff.id == tmp.buff);
-                            choices[j] = new Choice(tmp.desc, tmp.chance, tmp.win, tmp.lose, tmp.stats, buff, item);
+                            //BuffBase buff = _buffs.Single(buff => buff.id == tmp.buff);
+                            //choices[j] = new Choice(tmp.desc, tmp.chance, tmp.win, tmp.lose, tmp.stats, buff, item);
                         }
                         res[i] = new Event(curr.id, curr.desc, location, choices);
                         break;

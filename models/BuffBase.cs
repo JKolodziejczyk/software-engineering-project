@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace RPG.models
 {
-    public class Buff
+    public class BuffBase
     {
         public int id { get; }
         public string name { get; }
-        public int time { get; }
-
-        public Buff(int id, string name, int time)
+        public int[] stats { get; }
+        public BuffBase(int id, string name, int[] stats)
         {
             this.id = id;
             this.name = name;
-            this.time = time;
+            this.stats = stats;
         }
     }
 }
