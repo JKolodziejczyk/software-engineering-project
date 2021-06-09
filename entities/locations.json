@@ -1,0 +1,54 @@
+[{
+  "id": 1,
+  "name": "Las",
+  "desc": "",
+  "next_event": "Wędrując jeszcze chwilę miałeś wrażenie, że las powoli się rozrzedza i faktycznie, po kilku metrach udało ci się go opuścić i wziąłeś sobie za kolejny cel podróży:"
+},
+{
+  "id": 2,
+  "name": "Karczma",
+  "desc": "",
+  "next_event": "Zamówiłeś ostatnie piwo i wypiłeś je rozmyślając co czeka cię w przzyszłości. Zamiast marzyć postanowiłeś działać i udałeś się do:"
+},
+{
+  "id": 3,
+  "name": "Jaskinia",
+  "desc": "",
+  "next_event": "Kiedy poczułeś, że już na stałe zostaniesz w tej jaskini, ujrzałeś światło w tunelu. Nie czekając długo opuściłeś jaskinię i zdecydowałeś, że kolejnym celem twojej podróży będzie:"
+},
+{
+  "id": 4,
+  "name": "Zamek",
+  "desc": "Już z oddali byłeś w stanie wypatrzyć mury zamku ale z bliska wydawał się on jeszcze bardziej majestatyczny. Postanowiłeś wejśc do środka i sprawdzić co się czeka.",
+  "next_event": "Po krótkiej chwili usłyszałeś rozmowę dwóch strażników odnośnie szpiega znajdującego się gdzieś w zamku. Ze strachu przed skierowaniem podejrzeń w twoją stronę i wyruszyć do:"
+},
+{
+  "id": 5,
+  "name": "Moczary",
+  "desc": "Niestety, ale przygoda nie polega tylko na odwiedzaniu pięknych miejsc. Tak było i w tym przypadku jak dotarłeś na moczary i pomimo groźby przemokniętych ubrań postanowiłeś sprawdzić co cię czeka.",
+  "next_event": "Miałeś wrażenie, że jeszcze kilka kroków po bagnie i twoje buty będą kompletnie niezdatne do użytku. Tak się jednak nie stało, gdyż udało ci się stamtąd wydostać, a za kolejny cel podróży obrałeś:"
+},
+{
+  "id": 6,
+  "name": "Magiczny las",
+  "desc": "Po długim marszu stanąłeś na skraju lasu. Intuicja podpowiadała ci, że to nie jest zwykły las. Mimo rozsądkowi postanowiłeś zbadać to miejsce.",
+  "next_event": "Poczułeś jak opuszcza cię zauroczenie tym lasem. Domyśliłeś się, że w trakcie wędrówki ktoś mógł rzucić na ciebie zaklęcie, abyś został w tym miejscu na zawsze. W obawie przed powrotem zauroczenia tym miejscem opuściłeś je i udałeś się do:"
+},
+{
+  "id": 7,
+  "name": "Okoliczna wieś",
+  "desc": "Po kilku minutach podróży natrafiłeś na okoliczną wieś. Mijałeś ludzi mających pełne ręce roboty, więc pomyślałeś, że gdzie praca tam i coś dla ciebie się znajdzie.",
+  "next_event": "Złowrogie spojrzenia mieszkańców dały ci do zrozumienia, że jesteś nietutejszy i jak najszybciej powinieneś opuścić to miejsce. Zrobiłeś to z pośpiechem i kolejnym celem twojej podróży był:"
+},
+{
+  "id": 8,
+  "name": "Rynek w mieście",
+  "desc": "Po krótkiej wędrówce dotarłeś do centrum miasta, na rynek. Zaciekawiony co spotka cię tutaj postanowiłeś się rozejrzeć.",
+  "next_event": "Będąc zmęczony kolejnymi ofertami od handlarzy w pośpiechu opuściłeś rynek i udałeś się do kolejnego punktu twojej odyseji:"
+},
+{
+  "id": 9,
+  "name": "Port",
+  "desc": "Dotarłeś do najbardziej tętniącej życiem części miasta. Port, jak zawsze tętnił życiem, a ciekawskie spojrzenia kierowały się w twoją stronę. Postanowiłeś się rozejrzeć.",
+  "next_event": "Wbudzałeś coraz większą uwagę szajek kontrolujących dzielnicę portu, w której się znajdowałeś. Postanowiłeś usunąć się im z drogi i ruszyć na kolejną wyprawę. Udałeś się do:"
+}]
