@@ -1,19 +1,19 @@
 [{
   "id": 1,
   "name": "Las",
-  "desc": "",
+  "desc": "Twoja odyseja doprowadziła cię do gęstego lasu. Pomimo obawy, że możesz nie być w stanie znaleźć drogi powrotnej, zdecydowałeś się wejść w głąb, w poszukiwaniu kolejnej przygody.",
   "next_event": "Wędrując jeszcze chwilę miałeś wrażenie, że las powoli się rozrzedza i faktycznie, po kilku metrach udało ci się go opuścić i wziąłeś sobie za kolejny cel podróży:"
 },
 {
   "id": 2,
   "name": "Karczma",
-  "desc": "",
-  "next_event": "Zamówiłeś ostatnie piwo i wypiłeś je rozmyślając co czeka cię w przzyszłości. Zamiast marzyć postanowiłeś działać i udałeś się do:"
+  "desc": "Uznałeś, że każdemu przyda się chwila wytchnienia, więc odszukałeś najbliższą karczmę i wchodząc, zastanawiałeś się jaka przygoda może spotkać cię tutaj.",
+  "next_event": "Zamówiłeś ostatnie piwo i wypiłeś je rozmyślając co czeka cię w przzyszłości. Zamiast marzyć, postanowiłeś działać i udałeś się do:"
 },
 {
   "id": 3,
   "name": "Jaskinia",
-  "desc": "",
+  "desc": "Po krótkiej wędrówce napotkałeś wejście do wielkiej jaskini. Zaciekawiony jakie przygody mogą cię w niej spotkać, wszedłeś do jej wnętrza.",
   "next_event": "Kiedy poczułeś, że już na stałe zostaniesz w tej jaskini, ujrzałeś światło w tunelu. Nie czekając długo opuściłeś jaskinię i zdecydowałeś, że kolejnym celem twojej podróży będzie:"
 },
 {
@@ -25,7 +25,7 @@
 {
   "id": 5,
   "name": "Moczary",
-  "desc": "Niestety, ale przygoda nie polega tylko na odwiedzaniu pięknych miejsc. Tak było i w tym przypadku jak dotarłeś na moczary i pomimo groźby przemokniętych ubrań postanowiłeś sprawdzić co cię czeka.",
+  "desc": "Niestety, ale przygoda nie polega tylko na odwiedzaniu pięknych miejsc. Tak było i w tym przypadku, jak dotarłeś na moczary i pomimo groźby przemokniętych ubrań postanowiłeś sprawdzić co cię czeka.",
   "next_event": "Miałeś wrażenie, że jeszcze kilka kroków po bagnie i twoje buty będą kompletnie niezdatne do użytku. Tak się jednak nie stało, gdyż udało ci się stamtąd wydostać, a za kolejny cel podróży obrałeś:"
 },
 {
