@@ -12,11 +12,11 @@ namespace RPG.models
         float chance { get; }
         string win { get; }
         string lose { get; }
-        float[] stats { get; }
+        int[] stats { get; }
         int buff { get; }
         int item { get; }
 
-        Choice(string desc, float chance, string win, string lose, float[] stats, int buff, int item)
+        Choice(string desc, float chance, string win, string lose, int[] stats, int buff, int item)
         {
             this.desc = desc;
             this.chance = chance;

@@ -8,8 +8,7 @@ namespace RPG.models
 {
     public class Item
     {
-        float[] stats { get; set; }
-
+        int[] stats { get; set; }
     }
 
     class Weapon: Item
