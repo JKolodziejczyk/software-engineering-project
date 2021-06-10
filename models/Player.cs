@@ -14,12 +14,16 @@ namespace RPG.models
         private Item item3 { get; set; }
         private List<Buff> _buffs { get; set; }
 
-        public void Change_stat(int stat_type, int value)
+        public void change_stat(int stat_type, int value)
         {
             stats[stat_type] += value;
             stats_min_max();
         }
 
+        public bool is_dead()
+        {
+            return stats[3] == 0 || stats[4] == 0 || stats[5] == 0;
+        }
 
         public void add_buff(Buff buff)
         {
@@ -70,16 +74,10 @@ namespace RPG.models
             {
                 for (var i = 0; i < 3; i++) Current[i] += item3._stats[i];
             }
-            /*
-            Console.WriteLine("Atak: ",Current[0]);
-            Console.WriteLine("Obrona: ",Current[1]);
-            Console.WriteLine("Szczęście: ",Current[2]);
-            Console.WriteLine("HP: ",Current[3]);
-            Console.WriteLine("Energia: ",Current[4]);
-            Console.WriteLine("Psycha: ",Current[5]);
-            Console.WriteLine("Złoto: ",Current[6]);*/
             return Current;
         }
+
+
     }
 
     public class Berserker : Player
@@ -89,11 +87,13 @@ namespace RPG.models
         private Lucky item3 { get; set; }
         public Berserker()
         {
+            Random statrandomizer = new Random();
             item1 = null;
             item2 = null;
             item3 = null;
             _class = "Berserker";
             _class_id = 1;
+            stats = new int[] {25, 15, 20, statrandomizer.Next(80,100),statrandomizer.Next(60,100),statrandomizer.Next(50,100),0};
         }
 
         protected override void stats_min_max()
@@ -164,11 +164,13 @@ namespace RPG.models
 
         public Knight()
         {
+            Random statrandomizer = new Random();
             item1 = null;
             item2 = null;
             item3 = null;
             _class = "Knight";
             _class_id = 2;
+            stats = new int[] {20, 20, 20, statrandomizer.Next(80,100),statrandomizer.Next(60,100),statrandomizer.Next(50,100),0};
         }
 
         protected override void stats_min_max()
@@ -239,11 +241,13 @@ namespace RPG.models
         private Lucky item3 { get; set; }
         public Thief()
         {
+            Random statrandomizer = new Random();
             item1 = null;
             item2 = null;
             item3 = null;
             _class = "Thief";
             _class_id = 3;
+            stats = new int[] {20, 15, 25, statrandomizer.Next(80,100),statrandomizer.Next(60,100),statrandomizer.Next(50,100),0};
         }
 
         protected override void stats_min_max()
