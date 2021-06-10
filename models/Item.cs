@@ -14,7 +14,7 @@ namespace RPG.models
 
     }
 
-    class Weapon: Item
+    public class Weapon: Item
     {
         public int id { get { return _id; } }
         public int[] stats { get { return _stats; } }
@@ -27,7 +27,7 @@ namespace RPG.models
         }
     }
 
-    class Armor : Item 
+    public class Armor : Item 
     {
         public int id { get { return _id; } }
         public int[] stats { get { return _stats; } }
@@ -40,7 +40,7 @@ namespace RPG.models
         }
     }
 
-    class Lucky : Item 
+    public class Lucky : Item 
     {
         public int id { get { return _id; } }
         public int[] stats { get { return _stats; } }
