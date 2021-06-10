@@ -11,14 +11,24 @@ namespace RPG.models
         public int id { get; }
         public string name { get; }
         public int[] stats { get; }
-        public int remaining_time { get; }
+        private int _remaining_time { get; set; }
 
+        public int remaining_time()
+        {
+            return _remaining_time;
+        }
+
+        public int decrement_time()
+        {
+            _remaining_time--;
+            return _remaining_time;
+        }
         public Buff(BuffBase buff, int remaining_time)
         {
             id = buff.id;
             name = buff.name;
             stats = buff.stats;
-            this.remaining_time = remaining_time;
+            this._remaining_time = remaining_time;
         }
     }
 }

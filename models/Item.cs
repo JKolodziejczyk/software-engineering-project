@@ -9,7 +9,7 @@ namespace RPG.models
     public abstract class Item
     {
         protected int _id { get; set; }
-        protected int[] _stats { get; set; }
+        public int[] _stats { get; set; }
         protected string _name { get; set; }
 
     }
