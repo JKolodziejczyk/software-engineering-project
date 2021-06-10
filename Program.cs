@@ -1,4 +1,5 @@
 ﻿using System;
+using RPG.logic_layer;
 
 namespace RPG
 {
@@ -6,7 +7,8 @@ namespace RPG
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GameEngine gameEngine = GameEngine.instance;
+            gameEngine.startGame();
         }
     }
 }

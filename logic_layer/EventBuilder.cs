@@ -10,11 +10,11 @@ namespace RPG.logic_layer
     public class EventBuilder
     {
         static EventBuilder _instance;
-        Location[] _locations;
-        EventBase[] _events;
+        Location[] _locations { get; set; }
+        EventBase[] _events { get; set; }
         int lastId = -1;
-        BuffBase[] _buffs;
-        Item[] _items;
+        BuffBase[] _buffs { get; set; }
+        Item[] _items { get; set; }
 
         public Location[] locations { get { return _locations; } }
         
@@ -29,7 +29,7 @@ namespace RPG.logic_layer
         {
             get
             {
-                if(instance == null)
+                if(_instance == null)
                 {
                     _instance = new EventBuilder();
                 }
