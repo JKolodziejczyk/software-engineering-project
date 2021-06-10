@@ -10,14 +10,14 @@ namespace RPG.models
     {
         public int id { get; }
         public string desc { get; }
-        public Location location { get; }
+        public Location locations { get; }
         public Choice[] choices { get; }
 
         public Event(int id, string desc, Location location, Choice[] choices)
         {
             this.id = id;
             this.desc = desc;
-            this.location = location;
+            this.locations = location;
             this.choices = choices;
         }
     }
