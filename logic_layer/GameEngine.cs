@@ -18,6 +18,10 @@ namespace RPG.logic_layer
         private GameEngine() 
         {
             eventBuilder = EventBuilder.instance;
+            BuffsAdapter buffs = new(eventBuilder);
+            EventAdapter events = new(eventBuilder);
+            LocationsAdapter locations = new(eventBuilder);
+            ItemsAdapter items = new();
         }
 
         public static GameEngine instance 
@@ -46,6 +50,16 @@ namespace RPG.logic_layer
             Console.ReadKey();
             Console.Clear();
         }
+
+        public void showItems() //TODO: Dopisać to jak itemy będą skończone
+        {
+            Item[] items = player.getItems();
+            for(int i = 0; i < items.Length; i++)
+            {
+                Console.WriteLine($"Slot {i + 1}. Item{i}");
+            }
+        }
+
         public void newGame()
         {
             printCenter("=====Nowa Gra=====");
@@ -53,6 +67,8 @@ namespace RPG.logic_layer
             Console.WriteLine("1.Berserker");
             Console.WriteLine("2.Rycerz");
             Console.WriteLine("3.Złodziej");
+            Console.WriteLine("\n");
+            Console.Write("Twój wybór: ");
             bool avaiable_choise = false;
             while (!avaiable_choise)
             {
@@ -90,10 +106,72 @@ namespace RPG.logic_layer
             //currEvent = eventBuilder.initialEvent();
         }
 
-        public void show_after_event()
+        public void showStatsScreen()
         {
+            Console.Clear();
+            printCenter("=====Statystyki=====");
+            Console.WriteLine($"Klasa postaci: {player.GetType()}");
             show_stats();
+            Console.WriteLine("Przedmioty:");
+            showItems();
+            Console.WriteLine("\n\nNaciśnij dowolny przycisk aby kontynuować...");
+            Console.ReadKey();
         }
+
+
+        public void showEventScreen(bool error = false)
+        {
+            Console.Clear();
+            Console.WriteLine(currEvent.location.desc);
+            Console.WriteLine(currEvent.desc);
+            Console.WriteLine("\n\n\n");
+            Console.WriteLine("Wybory:");
+            for (int i = 0; i < currEvent.choices.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}. " + currEvent.choices[i].desc);
+            }
+            Console.WriteLine("\n");
+            if (error) Console.WriteLine("Podałeś złą opcję");
+            Console.Write("Twój wybór: ");
+        }
+
+        public void showAfterEventScreen(Choice choice)
+        {
+            Console.ReadKey();
+        }
+
+        public void showChooseNextEvent(Event[] events)
+        {
+            bool error = false;
+            while (true)
+            {
+                Console.WriteLine(currEvent.location.next_event);
+                Console.WriteLine("\n\n\n");
+                Console.WriteLine("Wybory:");
+                for (int i = 0; i < events.Length; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {events[i].location}");
+                }
+                Console.WriteLine("\n");
+                if (error) Console.WriteLine("Podałeś złą opcję");
+                Console.Write("Twój wybór: ");
+                string input = Console.ReadLine();
+                int locationIdx;
+                if (!int.TryParse(input, out locationIdx))
+                {
+                    error = true;
+                    continue;
+                }
+                if(locationIdx <= 0 || locationIdx > events.Length)
+                {
+                    error = true;
+                    continue;
+                }
+                currEvent = events[locationIdx];
+                break;
+            }
+        }
+
         public void printCenter(string s)
         {
             Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
@@ -102,9 +180,40 @@ namespace RPG.logic_layer
         public void startGame()
         {
             newGame();
-            while (!player.is_dead())
+            while (true)
             {
-                //Events
+                bool error = false;
+                int choiceIdx;
+                while (true) //Pierwszy screen eventu
+                {
+                    showEventScreen(error);
+                    string input = Console.ReadLine();
+                    if (!int.TryParse(input, out choiceIdx))
+                    {
+                        error = true;
+                        continue;
+                    }
+                    if (choiceIdx < 0 || choiceIdx > currEvent.choices.Length)
+                    {
+                        error = true;
+                        continue;
+                    }
+                    if(choiceIdx == 0)
+                    {
+                        showStatsScreen();
+                        error = false;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                showAfterEventScreen(currEvent.choices[choiceIdx - 1]);
+
+                if (player.is_dead()) break;
+
+                showChooseNextEvent(eventBuilder.nextEvents());
             }
             Console.WriteLine("Umarłeś");
             //Death_event
