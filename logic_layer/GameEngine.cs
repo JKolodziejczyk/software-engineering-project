@@ -67,47 +67,49 @@ namespace RPG.logic_layer
 
         public void newGame()
         {
-            printCenter("=====Nowa Gra=====");
-            Console.WriteLine("Wybierz klasę postaci:");
-            Console.WriteLine("1.Berserker");
-            Console.WriteLine("2.Rycerz");
-            Console.WriteLine("3.Złodziej");
-            Console.WriteLine("\n");
-            Console.Write("Twój wybór: ");
-            bool avaiable_choise = false;
-            while (!avaiable_choise)
-            {
-                var _class = Console.ReadLine();
+            bool error = false;
+            while(true){
+                Console.Clear();
+                printCenter("=====Nowa Gra=====");
+                Console.WriteLine("Wybierz klasę postaci:");
+                Console.WriteLine("1.Berserker");
+                Console.WriteLine("2.Rycerz");
+                Console.WriteLine("3.Złodziej");
+                Console.WriteLine("\n");
+                if (error) Console.WriteLine("Podałeś złą opcję.");
+                Console.Write("Twój wybór: ");
+                var _class = Console.ReadLine().Trim();
                 switch (_class)
                 {
-                    case "1" or "Berserker" or "berserker":
-                    {
-                        Console.WriteLine("Twoja postać to berserker");
-                        player = new Berserker();
-                        avaiable_choise = true;
-                        break;
-                    }
-                    case "2" or "Rycerz" or "rycerz":
-                    {
-                        Console.WriteLine("Twoja postać to rycerz");
-                        player = new Knight();
-                        avaiable_choise = true;
-                        break;
-                    }
-                    case "3" or "Złodziej" or "złodziej":
-                    {
-                        Console.WriteLine("Twoja postać to złodziej");
-                        player = new Thief();
-                        avaiable_choise = true;
-                        break;
-                    }
+                    case "1":
+                        {
+                            Console.WriteLine("Twoja postać to berserker");
+                            player = new Berserker();
+                            error = false;
+                            break;
+                        }
+                    case "2":
+                        {
+                            Console.WriteLine("Twoja postać to rycerz");
+                            player = new Knight();
+                            error = false;
+                            break;
+                        }
+                    case "3":
+                        {
+                            Console.WriteLine("Twoja postać to złodziej");
+                            player = new Thief();
+                            error = false;
+                            break;
+                        }
                     default:
-                    {
-                        Console.WriteLine("Wybierz prawidłową opcję");
-                        break;
-                    }
+                        {
+                            error = true;
+                            break;
+                        }
                 }
-            }
+                    if (!error) break;
+                }
             //currEvent = eventBuilder.initialEvent();
         }
 
@@ -152,6 +154,7 @@ namespace RPG.logic_layer
             bool error = false;
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine(currEvent.location.next_event);
                 Console.WriteLine("\n\n\n");
                 Console.WriteLine("Wybory:");
