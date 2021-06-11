@@ -147,7 +147,7 @@ namespace RPG.logic_layer
         public Event initialEvent()
         {
             EventBase start = _events.Single(_event => _event.id == -1);
-            Location location = _locations.Single(location => location.id == start.locations[0]);
+            Location location = _locations.Single(location => location.id == -1);
             Event res = new Event(start.id, start.desc, location, createChoices(start.choices));
             lastId = -1;
             return res;

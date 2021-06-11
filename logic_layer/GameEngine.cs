@@ -33,6 +33,7 @@ namespace RPG.logic_layer
         }
         public void show_stats()
         {
+            Console.Clear();
             var stat = player.DisplayStats();
             Console.WriteLine("Atak: {0}",stat[0]);
             Console.WriteLine("Obrona: {0}",stat[1]);
@@ -41,6 +42,9 @@ namespace RPG.logic_layer
             Console.WriteLine("Energia: {0}",stat[4]);
             Console.WriteLine("Psycha: {0}",stat[5]);
             Console.WriteLine("Złoto: {0}",stat[6]);
+            Console.WriteLine("Wciśnij dowolny klawisz by kontynuować.");
+            Console.ReadKey();
+            Console.Clear();
         }
         public void newGame()
         {
@@ -58,21 +62,21 @@ namespace RPG.logic_layer
                     case "1" or "Berserker" or "berserker":
                     {
                         Console.WriteLine("Twoja postać to berserker");
-                        player =new Berserker();
+                        player = new Berserker();
                         avaiable_choise = true;
                         break;
                     }
                     case "2" or "Rycerz" or "rycerz":
                     {
                         Console.WriteLine("Twoja postać to rycerz");
-                        player =new Knight();
+                        player = new Knight();
                         avaiable_choise = true;
                         break;
                     }
                     case "3" or "Złodziej" or "złodziej":
                     {
                         Console.WriteLine("Twoja postać to złodziej");
-                        player =new Thief();
+                        player = new Thief();
                         avaiable_choise = true;
                         break;
                     }
@@ -83,8 +87,6 @@ namespace RPG.logic_layer
                     }
                 }
             }
-            
-
             //currEvent = eventBuilder.initialEvent();
         }
 
@@ -93,8 +95,6 @@ namespace RPG.logic_layer
             Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
             Console.WriteLine(s);
         }
-
-
         public void startGame()
         {
             newGame();
