@@ -35,8 +35,11 @@ namespace RPG.models
         {
             for (var i=0; i<this._buffs.Count; i++)
             {
-                if (_buffs[i].remaining_time() <= 0) _buffs.RemoveAt(i);
-                else _buffs[i].decrement_time();
+                if (_buffs[i].remaining_time() <= 0)
+                {
+                    _buffs.RemoveAt(i);
+                    i--;
+                }
             }
         }
 
@@ -44,7 +47,8 @@ namespace RPG.models
         {
             foreach (var elem in _buffs)
             {
-                for (var i = 0; i < 6; i++) stats[i] += elem.stats[i];
+                for (int i = 0; i < 6; i++) stats[i] += elem.stats[i];
+                elem.decrement_time();
             }
         }
 
@@ -77,6 +81,14 @@ namespace RPG.models
             return Current;
         }
 
+        public Item[] getItems()
+        {
+            Item[] res = new Item[3];
+            res[0] = item1;
+            res[1] = item2;
+            res[2] = item3;
+            return res;
+        }
 
     }
 
