@@ -1,0 +1,320 @@
+[
+  {
+    "id": -4,
+    "desc": "Psycha siada. To już koniec. Stwierdziłeś, że dłużej nie zniesiesz błąkania po świecie. Postanowiłeś rzucić to wszystko i pojechać w Bieszczady.",
+    "locations": null,
+    "choices": null
+  },
+  {
+    "id": -3,
+    "desc": "Z każdym kolejnym krokiem odczuwałeś coraz większe zmęczenie wędrówką ale ten, który postawiłeś, był twoim ostatnim. Padłeś ze zmęczenia na ziemię i tak skończyła się twoja przygoda.",
+    "locations": null,
+    "choices": null
+  },
+  {
+    "id": -2,
+    "desc": "Po otrzymaniu ostatnich obrażeń poczułeś jak powoli uchodzi z ciebie życie. A więc tak wygląda koniec, pomyślałeś. Zadowolny, że dane ci było przeżyć jeszcze kilka przygód, pożeganłeś się ze światem i upadłeś bez życia.",
+    "locations": null,
+    "choices": null
+  },
+  {
+    "id": -1,
+    "desc": "Nie próbuj wstawać, bo tylko pogorszysz swoją sytuację. Gdzie jesteś i kim jestem to nieistotne. Posłuchj mnie bardzo uważnie. Rzucę na ciebie zaklęcie, które sprawi, że przeżyjesz, jednakże ma ono jeden efekt uboczny. Po jego działaniu będziesz skazany na tułaczkę po świecie, aż do końca swoich dni.",
+    "locations": [-1],
+    "choices":
+    [
+      {
+        "desc": "Zgódź się na rzucenie zaklęcia.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, odznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
+        "lose": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, odznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 0],
+        "statsLose": [0, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Nie zgadzaj się na rzucenie zaklęcia.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, odznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
+        "lose": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, odznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 0],
+        "statsLose": [0, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      }
+   ]
+  },
+  {
+    "id": 0,
+    "desc": "Spotykasz nieznajomego, którego nigdy w życiu nie widziałeś, ale on twierdzi, że raz uratował ci życie. Wyglądał na osobę, z którą nie chcesz mieć na pieńku, a dowód wdzięczności żąda od ciebie złota.",
+    "locations": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "choices":
+    [
+      {
+        "desc": "Oddaj 20 złota.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Nieznajomy z szyderczym uśmiechem podziękował za złoto, po czym zniknął tak szybko jak się pojawił. Wzruszyłeś ramionami i lekko poddenerwowany utratą złota ruszyłeś dalej.",
+        "lose": "Nieznajomy z szyderczym uśmiechem podziękował za złoto, po czym zniknął tak szybko jak się pojawił. Wzruszyłeś ramionami i lekko poddenerwowany utratą złota ruszyłeś dalej.",
+        "statsWin": [0, 0, 0, 0, 0, 0, -20],
+        "statsLose": [0, 0, 0, 0, 0, 0, -20],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Zasugeruj rzut monetą o podwójną stawkę.",
+        "chance": 0.3,
+        "flags": [0, 0, 0.2, 0, 0, 0, 0],
+        "win": "Wygrałeś rzut monetą. Nieznajomy obszedł się smakiem i zniknął tak szybko jak się pojawił. Zadowolony, że zachowałeś złoto ruszyłeś dalej.",
+        "lose": "Przegrałeś rzut monetą. To będzie 40 złota - oznajmił nieznajomy, który z szyderczym uśmiechem podziękował, po czym zniknął tak szybko jak się pojawił. Zdenerwowany utratą złota ruszyłeś dalej.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 0],
+        "statsLose": [0, 0, 0, 0, 0, 0, -40],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Zasugeruj, że zapłacisz za swoje złoto krwią - otrzymując obrażenia",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Nieznajomego zdziwiła twoja prośba, ale po chwili rozmyślania z uśmiechem przyjął swoją propozycję. Wyjął sztylet, którym rozciął twoją droń i fiolkę, do któej zebrał trochę twojej krwi. Odszedł śmiejąc się złowrogo, a ty z uszczerbkiem na psychicę, ruszyłeś dalej.",
+        "lose": "Nieznajomego zdziwiła twoja prośba, ale po chwili rozmyślania z uśmiechem przyjął swoją propozycję. Wyjął sztylet, którym rozciął twoją droń i fiolkę, do któej zebrał trochę twojej krwi. Odszedł śmiejąc się złowrogo, a ty z uszczerbkiem na psychicę, ruszyłeś dalej.",
+        "statsWin": [0, 0, 0, -5, 0, 0, 0],
+        "statsLose": [0, 0, 0, -5, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, -2],
+        "buffsLose": [0, 0, 0, 0, 0, -2],
+        "item": false
+      }
+   ]
+  },
+  {
+    "id": 1,
+    "desc": "Spotkałeś dżina, który spełni twoje jedno życzenie. Pewnie się zastanawiasz czemu jedno. No cóż, nawet dżinom zdarzają się gorsze dni, a ty uznałeś, że darowanemu koniowi się w zęby nie zagląda i wypowiedziałeś życzenie.",
+    "locations": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "choices":
+    [
+      {
+        "desc": "Chcę być silny.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "statsWin": [2, 0, 0, 0, 0, 0, 0],
+        "statsLose": [-2, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Chcę być odporny.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "statsWin": [0, 2, 0, 0, 0, 0, 0],
+        "statsLose": [0, -2, 0, 0, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Chcę mieć więcej szczęścia w życiu.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "statsWin": [0, 0, 2, 0, 0, 0, 0],
+        "statsLose": [0, 0, -2, 0, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Chcę być wytrzymały.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "statsWin": [0, 0, 0, 4, 0, 0, 0],
+        "statsLose": [0, 0, 0, -4, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Chcę mniej się męczyć.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "statsWin": [0, 0, 0, 0, 4, 0, 0],
+        "statsLose": [0, 0, 0, 0, -4, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Chcę mieć mocną psychę.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "statsWin": [0, 0, 0, 0, 0, 4, 0],
+        "statsLose": [0, 0, 0, 0, 0, -4, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Chcę być bogaty.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 10],
+        "statsLose": [0, 0, 0, 0, 0, 0, -10],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      },
+      {
+        "desc": "Chcę dostać losowy przedmiot.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 0],
+        "statsLose": [0, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": true
+      }
+   ]
+  },
+  {
+    "id": 2,
+    "desc": "Spotykasz ducha, która wygląda tak samo jak ty. Przyzwyczaiłeś się do widywania dziwnych rzeczy ale coś takiego zawsze będzie cię zaskakiwać. Zostałeś wyzwany na pojedynek, w którym możesz wybrać zasady walki,",
+    "locations": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "choices":
+    [
+      {
+        "desc": "Zniszcz cel atakując go.",
+        "chance": 0.5,
+        "flags": [0.2, 0, 0, 0, 0, 0, 0],
+        "win": "Zrobiłeś mocny zamach i udało ci się zniszczyć cel. Duch dał ci złoto w nagrodę i zniknął.",
+        "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 10],
+        "statsLose": [0, 0, 0, 0, 0, -2, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, -2, 0],
+        "item": false
+      },
+      {
+        "desc": "Zablokuj atak ducha.",
+        "chance": 0.5,
+        "flags": [0, 0.2, 0, 0, 0, 0, 0],
+        "win": "Duch wykonał uderzenie ale było ono tak słabe, że nawet do nie poczułeś. Duch dał ci złoto w nagrodę i zniknął.",
+        "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 10],
+        "statsLose": [0, 0, 0, -6, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, -1, 0],
+        "item": false
+      },
+      {
+        "desc": "Rzuć monetą.",
+        "chance": 0.5,
+        "flags": [0, 0, 0.2, 0, 0, 0, 0],
+        "win": "To twój szczęśliwy dzień, wygrałeś rzut monetą. Duch dał ci złoto w nagrodę i zniknął.",
+        "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 10],
+        "statsLose": [0, 0, 0, 0, 0, -1, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, -2, 0],
+        "item": false
+      },
+      {
+        "desc": "Zacznij uciekać jak tchórz.",
+        "chance": 0,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "To nie była mądra decyzja. Duch obsypał cię gradem szybkich ciosów, tak zwana bomba na banie i balet skończony, po czym zawył jak opętany i zniknął.",
+        "lose": "To nie była mądra decyzja. Duch obsypał cię gradem szybkich ciosów, tak zwana bomba na banie i balet skończony, po czym zawył jak opętany i zniknął.",
+        "statsWin": [-20, -20, -20, -20, -20, -20, -50],
+        "statsLose": [-20, -20, -20, -20, -20, -20, -50],
+        "buffsWin": [-10, -10, -10, -10, -10, -10],
+        "buffsLose": [-10, -10, -10, -10, -10, -10],
+        "item": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "desc": "Na twojej drodze znalazłeś porzuconą skrzynię. Zastanawiałeś się czemu ktoś mógł porzucić ją w tym miejscu.",
+    "locations": [0, 2, 4, 5],
+    "choices":
+    [
+      {
+        "desc": "Mimo wszystko postanowiłeś otworzyć skrzynię.",
+        "chance": 0.2,
+        "flags": [0, 0, 0.5, 0, 0, 0, 0],
+        "win": "Opłaciło się. Znalazłeś trochę złota i przedmiot.",
+        "lose": "Niesamowite... Pułapka... No kto mógł się domyślić? Bandyci wzięli cię z zaskoczenia i obrabowali cię ze złota i lekko poturbowali. Kontynuowałeś podróż.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 10],
+        "statsLose": [0, 0, 0, 0, 0, 0, -30],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, -2, 0, 0],
+        "item": true
+      },
+      {
+        "desc": "Zostaw ją gdyż może to być pułapka.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Racjonalne podejście. Nie ma co ryzykować. Zawsze mogła to być pułapka. Minąłeś skrzynię i ruszyłeś dalej.",
+        "lose": "Racjonalne podejście. Nie ma co ryzykować. Zawsze mogła to być pułapka. Minąłeś skrzynię i ruszyłeś dalej.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 0],
+        "statsLose": [0, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      }
+   ]
+  },
+  {
+    "id": 4,
+    "desc": "Na twojej drodze natrafiłeś na opuszczony dom. Zastanawiałeś się czemu ktoś mógł porzucić ją w tym miejscu.",
+    "locations": [0, 2, 4, 5],
+    "choices":
+    [
+      {
+        "desc": "Mimo wszystko postanowiłeś otworzyć skrzynię.",
+        "chance": 0.2,
+        "flags": [0, 0, 0.5, 0, 0, 0, 0],
+        "win": "Opłaciło się. Znalazłeś trochę złota i przedmiot.",
+        "lose": "Niesamowite... Pułapka... No kto mógł się domyślić? Bandyci wzięli cię z zaskoczenia i obrabowali cię ze złota i lekko poturbowali. Kontynuowałeś podróż.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 10],
+        "statsLose": [0, 0, 0, 0, 0, 0, -30],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, -2, 0, 0],
+        "item": true
+      },
+      {
+        "desc": "Zostaw ją gdyż może to być pułapka.",
+        "chance": 1,
+        "flags": [0, 0, 0, 0, 0, 0, 0],
+        "win": "Racjonalne podejście. Nie ma co ryzykować. Zawsze mogła to być pułapka. Minąłeś skrzynię i ruszyłeś dalej.",
+        "lose": "Racjonalne podejście. Nie ma co ryzykować. Zawsze mogła to być pułapka. Minąłeś skrzynię i ruszyłeś dalej.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 0],
+        "statsLose": [0, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [0, 0, 0, 0, 0, 0],
+        "buffsLose": [0, 0, 0, 0, 0, 0],
+        "item": false
+      }
+   ]
+  },
+]
