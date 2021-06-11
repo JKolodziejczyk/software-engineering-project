@@ -90,6 +90,10 @@ namespace RPG.logic_layer
             //currEvent = eventBuilder.initialEvent();
         }
 
+        public void show_after_event()
+        {
+            show_stats();
+        }
         public void printCenter(string s)
         {
             Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
