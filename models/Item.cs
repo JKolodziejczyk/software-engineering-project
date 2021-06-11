@@ -12,7 +12,6 @@ namespace RPG.models
         public int[] _stats { get; set; }
         public string _name { get; set; }
         public int _owner { get; set; }
-        
         public int _type { get; set; }
 
     }

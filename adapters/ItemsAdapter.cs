@@ -23,23 +23,23 @@ namespace RPG.logic_layer
         {
             StreamReader file = File.OpenText(PATH); 
             ItemBase[] itemsbase = JsonSerializer.Deserialize<ItemBase[]>(file.ReadToEnd());
-            Item[] items = new Item[] { };
+            List<Item> items = new();
             foreach (ItemBase _item in itemsbase)
             {
                 if (_item.type == 1)
                 {
-                    items.Append(new Weapon(_item));
+                    items.Add(new Weapon(_item));
                 }
                 if (_item.type == 2)
                 {
-                    items.Append(new Armor(_item));
+                    items.Add(new Armor(_item));
                 }
                 if (_item.type == 3)
                 {
-                    items.Append(new Lucky(_item));
+                    items.Add(new Lucky(_item));
                 }
             }
-            eventBuilder.setItems(items);
+            eventBuilder.setItems(items.ToArray());
         }
     }
 }
