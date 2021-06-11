@@ -8,48 +8,48 @@ namespace RPG.models
 {
     public abstract class Item
     {
-        protected int _id { get; set; }
+        public int _id { get; set; }
         public int[] _stats { get; set; }
-        protected string _name { get; set; }
+        public string _name { get; set; }
+        public int _owner { get; set; }
+        
+        public int _type { get; set; }
 
     }
 
     public class Weapon: Item
     {
-        public int id { get { return _id; } }
-        public int[] stats { get { return _stats; } }
-        public string name { get { return _name; } }
-        public Weapon(int id, int[] stats, string name)
+        public Weapon(int id, int[] stats, string name, int owner)
         {
             _id = id;
             _stats = stats;
             _name = name;
+            _owner = owner;
+            _type = 1;
         }
     }
 
     public class Armor : Item 
     {
-        public int id { get { return _id; } }
-        public int[] stats { get { return _stats; } }
-        public string name { get { return _name; } }
-        public Armor(int id, int[] stats, string name)
+        public Armor(int id, int[] stats, string name, int owner)
         {
             _id = id;
             _stats = stats;
             _name = name;
+            _owner = owner;
+            _type = 2;
         }
     }
 
     public class Lucky : Item 
     {
-        public int id { get { return _id; } }
-        public int[] stats { get { return _stats; } }
-        public string name { get { return _name; } }
-        public Lucky(int id, int[] stats, string name)
+        public Lucky(int id, int[] stats, string name, int owner)
         {
             _id = id;
             _stats = stats;
             _name = name;
+            _owner = owner;
+            _type = 3;
         }
     }
 }
