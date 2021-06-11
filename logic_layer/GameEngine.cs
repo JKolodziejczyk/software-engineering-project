@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace RPG.logic_layer
             BuffsAdapter buffs = new(eventBuilder);
             EventAdapter events = new(eventBuilder);
             LocationsAdapter locations = new(eventBuilder);
-            ItemsAdapter items = new();
+            ItemsAdapter items = new(eventBuilder);
         }
 
         public static GameEngine instance 

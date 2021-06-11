@@ -1,0 +1,62 @@
+[
+  {
+    "id": -1,
+    "name": "Pobojowisko",
+    "desc": "Otworzyłeś oczy. Czułeś przeszywający ból w głowie. Chciałeś sprawdzić, jednakże prawa ręka nie miała w sobie czucia, a z ramienia wystawała ci kośc. Dotknąłeś lewą ręką skroni - rozcięta. Próbowałeś się podnieść, jednakże było to bezskuteczne. Podniosłeś lekko głowę ale jedyne co dostrzegłeś to była ułamana włóczna wystająca z twojego brzucha. Jęknąłeś z bólu. Zanim jednak zdążyłeś coś zrobić usłyszałeś głos:",
+    "next_event": "Otworzyłeś oczy po bardzo długim czasie. Nawet nie wiesz jak długim. Obudziłeś się niedaleko pobojowiska pełnego trupów. Dotknąłeś skroni, ramienia, ale wszystko było w porządku. Spojrzałeś na brzuch, jednakże tam też ani zadrapania. To był tylko sen, ale czy na pewno? Po krótkim rozmyślaniu, doszedłeś do wniosku, że w sumie zawsze mogło być gorzej. Nie tracąc czasu na dalesz rozmyślania ani odpoczynek, wstałeś i zadecydowałeś, że pierwszym miejscem, od którego rozpoczniesz swoją tułaczkę będzie:"
+  },
+  {
+    "id": 0,
+    "name": "Las",
+    "desc": "Twoja odyseja doprowadziła cię do gęstego lasu. Pomimo obawy, że możesz nie być w stanie znaleźć drogi powrotnej, zdecydowałeś się wejść w głąb, w poszukiwaniu kolejnej przygody.",
+    "next_event": "Wędrując jeszcze chwilę miałeś wrażenie, że las powoli się rozrzedza i faktycznie, po kilku metrach udało ci się go opuścić i wziąłeś sobie za kolejny cel podróży:"
+  },
+  {
+    "id": 1,
+    "name": "Karczma",
+    "desc": "Uznałeś, że każdemu przyda się chwila wytchnienia, więc odszukałeś najbliższą karczmę i wchodząc, zastanawiałeś się jaka przygoda może spotkać cię tutaj.",
+    "next_event": "Zamówiłeś ostatnie piwo i wypiłeś je rozmyślając co czeka cię w przzyszłości. Zamiast marzyć, postanowiłeś działać i udałeś się do:"
+  },
+  {
+    "id": 2,
+    "name": "Jaskinia",
+    "desc": "Po krótkiej wędrówce napotkałeś wejście do wielkiej jaskini. Zaciekawiony jakie przygody mogą cię w niej spotkać, wszedłeś do jej wnętrza.",
+    "next_event": "Kiedy poczułeś, że już na stałe zostaniesz w tej jaskini, ujrzałeś światło w tunelu. Nie czekając długo opuściłeś jaskinię i zdecydowałeś, że kolejnym celem twojej podróży będzie:"
+  },
+  {
+    "id": 3,
+    "name": "Zamek",
+    "desc": "Już z oddali byłeś w stanie wypatrzyć mury zamku ale z bliska wydawał się on jeszcze bardziej majestatyczny. Postanowiłeś wejśc do środka i sprawdzić co się czeka.",
+    "next_event": "Po krótkiej chwili usłyszałeś rozmowę dwóch strażników odnośnie szpiega znajdującego się gdzieś w zamku. Ze strachu przed skierowaniem podejrzeń w twoją stronę i wyruszyć do:"
+  },
+  {
+    "id": 4,
+    "name": "Moczary",
+    "desc": "Niestety, ale przygoda nie polega tylko na odwiedzaniu pięknych miejsc. Tak było i w tym przypadku, jak dotarłeś na moczary i pomimo groźby przemokniętych ubrań postanowiłeś sprawdzić co cię czeka.",
+    "next_event": "Miałeś wrażenie, że jeszcze kilka kroków po bagnie i twoje buty będą kompletnie niezdatne do użytku. Tak się jednak nie stało, gdyż udało ci się stamtąd wydostać, a za kolejny cel podróży obrałeś:"
+  },
+  {
+    "id": 5,
+    "name": "Magiczny las",
+    "desc": "Po długim marszu stanąłeś na skraju lasu. Intuicja podpowiadała ci, że to nie jest zwykły las. Mimo rozsądkowi postanowiłeś zbadać to miejsce.",
+    "next_event": "Poczułeś jak opuszcza cię zauroczenie tym lasem. Domyśliłeś się, że w trakcie wędrówki ktoś mógł rzucić na ciebie zaklęcie, abyś został w tym miejscu na zawsze. W obawie przed powrotem zauroczenia tym miejscem opuściłeś je i udałeś się do:"
+  },
+  {
+    "id": 6,
+    "name": "Okoliczna wieś",
+    "desc": "Po kilku minutach podróży natrafiłeś na okoliczną wieś. Mijałeś ludzi mających pełne ręce roboty, więc pomyślałeś, że gdzie praca tam i coś dla ciebie się znajdzie.",
+    "next_event": "Złowrogie spojrzenia mieszkańców dały ci do zrozumienia, że jesteś nietutejszy i jak najszybciej powinieneś opuścić to miejsce. Zrobiłeś to z pośpiechem i kolejnym celem twojej podróży był:"
+  },
+  {
+    "id": 7,
+    "name": "Rynek w mieście",
+    "desc": "Po krótkiej wędrówce dotarłeś do centrum miasta, na rynek. Zaciekawiony co spotka cię tutaj postanowiłeś się rozejrzeć.",
+    "next_event": "Będąc zmęczony kolejnymi ofertami od handlarzy w pośpiechu opuściłeś rynek i udałeś się do kolejnego punktu twojej odyseji:"
+  },
+  {
+    "id": 8,
+    "name": "Port",
+    "desc": "Dotarłeś do najbardziej tętniącej życiem części miasta. Port, jak zawsze tętnił życiem, a ciekawskie spojrzenia kierowały się w twoją stronę. Postanowiłeś się rozejrzeć.",
+    "next_event": "Wbudzałeś coraz większą uwagę szajek kontrolujących dzielnicę portu, w której się znajdowałeś. Postanowiłeś usunąć się im z drogi i ruszyć na kolejną wyprawę. Udałeś się do:"
+  }
+]

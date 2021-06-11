@@ -27,6 +27,15 @@ namespace RPG.models
             _owner = owner;
             _type = 1;
         }
+
+        public Weapon(ItemBase item)
+        {
+            _id = item.id;
+            _stats = item.stats;
+            _name = item.name;
+            _owner = item.owner;
+            _type = 1;
+        }
     }
 
     public class Armor : Item 
@@ -39,6 +48,14 @@ namespace RPG.models
             _owner = owner;
             _type = 2;
         }
+        public Armor(ItemBase item)
+        {
+            _id = item.id;
+            _stats = item.stats;
+            _name = item.name;
+            _owner = item.owner;
+            _type = 2;
+        }
     }
 
     public class Lucky : Item 
@@ -49,6 +66,14 @@ namespace RPG.models
             _stats = stats;
             _name = name;
             _owner = owner;
+            _type = 3;
+        }
+        public Lucky(ItemBase item)
+        {
+            _id = item.id;
+            _stats = item.stats;
+            _name = item.name;
+            _owner = item.owner;
             _type = 3;
         }
     }

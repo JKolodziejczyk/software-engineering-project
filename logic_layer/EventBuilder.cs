@@ -21,8 +21,8 @@ namespace RPG.logic_layer
         public EventBase[] events { get { return _events; } }
 
         public BuffBase[] buffs { get { return _buffs; } }
-
         public Item[] items { get { return _items; } }
+        
         private EventBuilder() { }
 
         public static EventBuilder instance
@@ -52,6 +52,11 @@ namespace RPG.logic_layer
             _buffs = buffs;
         }
 
+        public void setItems(Item[] items)
+        {
+            _items = items;
+        }
+        
         private Location[] chooseLocations(int[] locations)
         {
             Random random = new();
