@@ -24,6 +24,9 @@ namespace RPG.logic_layer
             LocationsAdapter locations = new(eventBuilder);
             ItemsAdapter items = new(eventBuilder);
             items.readData();
+            events.readData();
+            locations.readData();
+            buffs.readData();
         }
 
         public static GameEngine instance 
@@ -39,22 +42,22 @@ namespace RPG.logic_layer
         }
         public void show_stats()
         {
-            var stat = player.DisplayStats();
-            Console.WriteLine("Atak: {0}",stat[0]);
-            Console.WriteLine("Obrona: {0}",stat[1]);
-            Console.WriteLine("Szczęście: {0}",stat[2]);
-            Console.WriteLine("HP: {0}",stat[3]);
-            Console.WriteLine("Energia: {0}",stat[4]);
-            Console.WriteLine("Psycha: {0}",stat[5]);
-            Console.WriteLine("Złoto: {0}",stat[6]);
+            var stat = player.getStats();
+            string[] statsNames = { "Atak", "Obrona", "Szczęście", "Zdrowie", "Energia", "Psycha", "Złoto" };
+            for(int i = 0; i < stat.Length; i++)
+            {
+                Console.WriteLine($"{statsNames[i]}: {stat[i]}");
+            }
         }
 
-        public void showItems() //TODO: Dopisać to jak itemy będą skończone
+        public void showItems()
         {
             Item[] items = player.getItems();
+            string[] types = player.getSlotTypes();
             for(int i = 0; i < items.Length; i++)
             {
-                Console.WriteLine($"Slot {i + 1}. Item{i}");
+                if (items[i] != null) Console.WriteLine($"Slot {i + 1} ({types[i]}). {items[i]._name} {items[i].getStats()}");
+                else Console.WriteLine($"Slot {i + 1} ({types[i]}). Puste");
             }
         }
 
@@ -63,61 +66,62 @@ namespace RPG.logic_layer
             Buff[] buffs = player.getBuffs();
             for(int i = 0; i < buffs.Length; i++)
             {
-                Console.WriteLine($"{i + 1}. {buffs[i].name} efekt: {buffs[i].stats}");
+                Console.WriteLine($"{i + 1}. {buffs[i].name} efekt: {buffs[i].getStats()}");
             }
         }
 
         public void newGame()
         {
-            eventBuilder.Itemsss();
-            printCenter("=====Nowa Gra=====");
-            Console.WriteLine("Wybierz klasę postaci:");
-            Console.WriteLine("1.Berserker");
-            Console.WriteLine("2.Rycerz");
-            Console.WriteLine("3.Złodziej");
-            Console.Write("Twój wybór: ");
-            bool avaiable_choise = false;
-            while (!avaiable_choise)
+            bool error = false;
+            while (true)
             {
-                var _class = Console.ReadLine();
+                Console.Clear();
+                printCenter("=====Nowa Gra=====");
+                Console.WriteLine("Wybierz klasę postaci:");
+                Console.WriteLine("1. Berserker");
+                Console.WriteLine("2. Rycerz");
+                Console.WriteLine("3. Złodziej\n");
+                if (error) Console.WriteLine("Podałeś złą opcję!");
+                Console.Write("Twój wybór: ");
+                var _class = Console.ReadLine().Trim();
                 switch (_class)
                 {
-                    case "1" or "Berserker" or "berserker":
-                    {
-                        Console.WriteLine("Twoja postać to berserker");
-                        player = new Berserker();
-                        avaiable_choise = true;
-                        break;
-                    }
-                    case "2" or "Rycerz" or "rycerz":
-                    {
-                        Console.WriteLine("Twoja postać to rycerz");
-                        player = new Knight();
-                        avaiable_choise = true;
-                        break;
-                    }
-                    case "3" or "Złodziej" or "złodziej":
-                    {
-                        Console.WriteLine("Twoja postać to złodziej");
-                        player = new Thief();
-                        avaiable_choise = true;
-                        break;
-                    }
+                    case "1":
+                        {
+                            player = new Berserker();
+                            error = false;
+                            break;
+                        }
+                    case "2":
+                        {
+                            player = new Knight();
+                            error = false;
+                            break;
+                        }
+                    case "3":
+                        {
+                            player = new Thief();
+                            error = false;
+                            break;
+                        }
                     default:
-                    {
-                        Console.WriteLine("Wybierz prawidłową opcję");
-                        break;
-                    }
+                        {
+                            error = true;
+                            break;
+                        }
                 }
+
+                if (!error) break;
             }
-            //currEvent = eventBuilder.initialEvent();
+            eventBuilder.setPlayerType(player.classId);
+            currEvent = eventBuilder.initialEvent();
         }
 
         public void showStatsScreen()
         {
             Console.Clear();
             printCenter("=====Statystyki=====");
-            Console.WriteLine($"Klasa postaci: {player.GetType()}");
+            Console.WriteLine($"Klasa postaci: {player.getClass()}");
             show_stats();
             Console.WriteLine("\nPrzedmioty:");
             showItems();
@@ -131,21 +135,66 @@ namespace RPG.logic_layer
         public void showEventScreen(bool error = false)
         {
             Console.Clear();
-            Console.WriteLine(currEvent.location.desc);
+            Console.WriteLine(currEvent.location.desc+"\n");
             Console.WriteLine(currEvent.desc);
-            Console.WriteLine("\n\n\n");
+            Console.WriteLine("\n");
             Console.WriteLine("Wybory:");
+            Console.WriteLine("0. Statystyki");
             for (int i = 0; i < currEvent.choices.Length; i++)
             {
                 Console.WriteLine($"{i + 1}. " + currEvent.choices[i].desc);
             }
             Console.WriteLine("\n");
-            if (error) Console.WriteLine("Podałeś złą opcję");
+            if (error) Console.WriteLine("Podałeś złą opcję!");
             Console.Write("Twój wybór: ");
         }
 
-        public void showAfterEventScreen(Choice choice)
+        public void showAfterEventScreen(Choice choice) //TODO: wyifowac sklepikarza
         {
+            Random random = new();
+            string[] statsNames = { "Atak", "Obrona", "Szczęście", "Zdrowie", "Energia", "Psycha", "Złoto" };
+            int[] lastStats = player.getStats();
+            Buff[] buffs;
+            double val = random.NextDouble();
+            double chance = choice.chance;
+            for(int i = 0; i < choice.flags.Length; i++)
+            {
+                chance += choice.flags[i] * player.getStats()[i] / 100;
+            }
+            Console.Clear();
+            printCenter("=====Podsumowanie=====");
+            if(val <= chance) //Wygrana
+            {
+                Console.WriteLine(choice.win);
+                player.changeStats(choice.statsWin);
+                player.addBuffs(choice.buffsWin);
+                buffs = choice.buffsWin;
+            }
+            else //Przegrana
+            {
+                Console.WriteLine(choice.lose);
+                player.changeStats(choice.statsLose);
+                player.addBuffs(choice.buffsLose);
+                buffs = choice.buffsLose;
+            }
+            int[] newStats = player.getStats();
+
+            Console.WriteLine("\nPodsumowanie statystyk");
+            for(int i = 0; i < newStats.Length; i++)
+            {
+                Console.WriteLine($"{statsNames[i]}: {lastStats[i]} -> {newStats[i]}");
+            }
+            Console.WriteLine("\nPrzedmioty:");
+            showItems();
+            Console.WriteLine("\nDodane efekty:");
+            int idx = 0;
+            foreach(Buff buff in buffs)
+            {
+                Console.WriteLine($"{idx++}. {buff.name}: {buff.getStats()}");
+            }
+            if(choice.item != null) { }
+            else { }
+            Console.WriteLine("\n\nNaciśnij dowolny przycisk aby kontynuować...");
             Console.ReadKey();
         }
 
@@ -154,15 +203,16 @@ namespace RPG.logic_layer
             bool error = false;
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine(currEvent.location.next_event);
-                Console.WriteLine("\n\n\n");
+                Console.WriteLine("\n");
                 Console.WriteLine("Wybory:");
                 for (int i = 0; i < events.Length; i++)
                 {
-                    Console.WriteLine($"{i + 1}. {events[i].location}");
+                    Console.WriteLine($"{i + 1}. {events[i].location.name}");
                 }
                 Console.WriteLine("\n");
-                if (error) Console.WriteLine("Podałeś złą opcję");
+                if (error) Console.WriteLine("Podałeś złą opcję!");
                 Console.Write("Twój wybór: ");
                 string input = Console.ReadLine();
                 int locationIdx;
@@ -176,7 +226,7 @@ namespace RPG.logic_layer
                     error = true;
                     continue;
                 }
-                currEvent = events[locationIdx];
+                currEvent = events[locationIdx - 1];
                 break;
             }
         }
@@ -219,13 +269,18 @@ namespace RPG.logic_layer
                 }
 
                 showAfterEventScreen(currEvent.choices[choiceIdx - 1]);
-
-                if (player.is_dead()) break;
+                player.apply_buffs();
+                if (player.is_dead() != 0) break;
 
                 showChooseNextEvent(eventBuilder.nextEvents());
             }
-            Console.WriteLine("Umarłeś");
             //Death_event
+            currEvent = eventBuilder.deathEvent(player.is_dead());
+            Console.Clear();
+            printCenter("=====Umarłeś=====");
+            Console.WriteLine(currEvent.desc);
+            Console.WriteLine("\n\nNaciśnij dowolny przycisk aby kontynuować...");
+            Console.ReadKey();
         }
 
     }

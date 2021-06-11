@@ -11,9 +11,20 @@ namespace RPG.models
         public int _id { get; set; }
         public int[] _stats { get; set; }
         public string _name { get; set; }
-        public int _owner { get; set; }
+        protected int _owner { get; set; }
         public int _type { get; set; }
+        public int owner { get { return _owner; } }
+        public string getType()
+        {
+            if (_type == 1) return "Broń";
+            else if (_type == 2) return "Pancerz";
+            else return "Szczęśliwy";
+        }
 
+        public string getStats()
+        {
+            return $"A: {_stats[0]} O: {_stats[1]} S: {_stats[2]}";
+        }
     }
 
     public class Weapon: Item

@@ -1,841 +1,821 @@
 [
-  {
-    "id": -4,
-    "desc": "Psycha siada. To już koniec. Stwierdziłeś, że dłużej nie zniesiesz błąkania po świecie. Postanowiłeś rzucić to wszystko i pojechać w Bieszczady.",
-    "locations": [],
-    "choices": []
-  },
-  {
-    "id": -3,
-    "desc": "Z każdym kolejnym krokiem odczuwałeś coraz większe zmęczenie wędrówką ale ten, który postawiłeś, był twoim ostatnim. Padłeś ze zmęczenia na ziemię i tak skończyła się twoja przygoda.",
-    "locations": [],
-    "choices": []
-  },
-  {
-    "id": -2,
-    "desc": "Po otrzymaniu ostatnich obrażeń poczułeś jak powoli uchodzi z ciebie życie. A więc tak wygląda koniec, pomyślałeś. Zadowolny, że dane ci było przeżyć jeszcze kilka przygód, pożeganłeś się ze światem i upadłeś bez życia.",
-    "locations": [],
-    "choices": []
-  },
-  {
-    "id": -1,
-    "desc": "Nie próbuj wstawać, bo tylko pogorszysz swoją sytuację. Gdzie jesteś i kim jestem to nieistotne. Posłuchj mnie bardzo uważnie. Rzucę na ciebie zaklęcie, które sprawi, że przeżyjesz, jednakże ma ono jeden efekt uboczny. Po jego działaniu będziesz skazany na tułaczkę po świecie, aż do końca swoich dni.",
-    "locations": [-1],
-    "choices":
-    [
-      {
-        "desc": "Zgódź się na rzucenie zaklęcia.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, odznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
-        "lose": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, odznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Nie zgadzaj się na rzucenie zaklęcia.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, odznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
-        "lose": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, odznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 0,
-    "desc": "Spotykasz nieznajomego, którego nigdy w życiu nie widziałeś, ale on twierdzi, że raz uratował ci życie. Wyglądał na osobę, z którą nie chcesz mieć na pieńku, a dowód wdzięczności żąda od ciebie złota.",
-    "locations": [0, 1, 2, 3, 4, 5, 6, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Oddaj 20 złota.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Nieznajomy z szyderczym uśmiechem podziękował za złoto, po czym zniknął tak szybko jak się pojawił. Wzruszyłeś ramionami i lekko poddenerwowany utratą złota ruszyłeś dalej.",
-        "lose": "Nieznajomy z szyderczym uśmiechem podziękował za złoto, po czym zniknął tak szybko jak się pojawił. Wzruszyłeś ramionami i lekko poddenerwowany utratą złota ruszyłeś dalej.",
-        "statsWin": [0, 0, 0, 0, 0, 0, -20],
-        "statsLose": [0, 0, 0, 0, 0, 0, -20],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Zasugeruj rzut monetą o podwójną stawkę.",
-        "chance": 0.3,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Wygrałeś rzut monetą. Nieznajomy obszedł się smakiem i zniknął tak szybko jak się pojawił. Zadowolony, że zachowałeś złoto ruszyłeś dalej.",
-        "lose": "Przegrałeś rzut monetą. To będzie 40 złota - oznajmił nieznajomy, który z szyderczym uśmiechem podziękował, po czym zniknął tak szybko jak się pojawił. Zdenerwowany utratą złota ruszyłeś dalej.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, -40],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Zasugeruj, że zapłacisz za swoje złoto krwią - otrzymując obrażenia",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Nieznajomego zdziwiła twoja prośba, ale po chwili rozmyślania z uśmiechem przyjął swoją propozycję. Wyjął sztylet, którym rozciął twoją droń i fiolkę, do któej zebrał trochę twojej krwi. Odszedł śmiejąc się złowrogo, a ty z uszczerbkiem na psychicę, ruszyłeś dalej.",
-        "lose": "Nieznajomego zdziwiła twoja prośba, ale po chwili rozmyślania z uśmiechem przyjął swoją propozycję. Wyjął sztylet, którym rozciął twoją droń i fiolkę, do któej zebrał trochę twojej krwi. Odszedł śmiejąc się złowrogo, a ty z uszczerbkiem na psychicę, ruszyłeś dalej.",
-        "statsWin": [0, 0, 0, -5, 0, 0, 0],
-        "statsLose": [0, 0, 0, -5, 0, 0, 0],
-        "buffsWin": [12],
-        "buffsLose": [12],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 1,
-    "desc": "Spotkałeś dżina, który spełni twoje jedno życzenie. Pewnie się zastanawiasz czemu jedno. No cóż, nawet dżinom zdarzają się gorsze dni, a ty uznałeś, że darowanemu koniowi się w zęby nie zagląda i wypowiedziałeś życzenie.",
-    "locations": [0, 1, 2, 3, 4, 5, 6, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Chcę być silny.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "statsWin": [2, 0, 0, 0, 0, 0, 0],
-        "statsLose": [-2, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Chcę być odporny.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "statsWin": [0, 2, 0, 0, 0, 0, 0],
-        "statsLose": [0, -2, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Chcę mieć więcej szczęścia w życiu.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "statsWin": [0, 0, 2, 0, 0, 0, 0],
-        "statsLose": [0, 0, -2, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Chcę być wytrzymały.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "statsWin": [0, 0, 0, 4, 0, 0, 0],
-        "statsLose": [0, 0, 0, -4, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Chcę mniej się męczyć.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "statsWin": [0, 0, 0, 0, 4, 0, 0],
-        "statsLose": [0, 0, 0, 0, -4, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Chcę mieć mocną psychę.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "statsWin": [0, 0, 0, 0, 0, 4, 0],
-        "statsLose": [0, 0, 0, 0, 0, -4, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Chcę być bogaty.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, 0, -10],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Chcę dostać losowy przedmiot.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": true
-      }
-   ]
-  },
-  {
-    "id": 2,
-    "desc": "Spotykasz ducha, która wygląda tak samo jak ty. Przyzwyczaiłeś się do widywania dziwnych rzeczy ale coś takiego zawsze będzie cię zaskakiwać. Zostałeś wyzwany na pojedynek, w którym możesz wybrać zasady walki,",
-    "locations": [0, 1, 2, 3, 4, 5, 6, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Zniszcz cel atakując go.",
-        "chance": 0.5,
-        "flags": [0.2, 0, 0, 0, 0, 0, 0],
-        "win": "Zrobiłeś mocny zamach i udało ci się zniszczyć cel. Duch dał ci złoto w nagrodę i zniknął.",
-        "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, -2, 0],
-        "buffsWin": [],
-        "buffsLose": [12],
-        "item": false
-      },
-      {
-        "desc": "Zablokuj atak ducha.",
-        "chance": 0.5,
-        "flags": [0, 0.2, 0, 0, 0, 0, 0],
-        "win": "Duch wykonał uderzenie ale było ono tak słabe, że nawet do nie poczułeś. Duch dał ci złoto w nagrodę i zniknął.",
-        "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, -6, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [12],
-        "item": false
-      },
-      {
-        "desc": "Rzuć monetą.",
-        "chance": 0.5,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "To twój szczęśliwy dzień, wygrałeś rzut monetą. Duch dał ci złoto w nagrodę i zniknął.",
-        "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, -1, 0],
-        "buffsWin": [],
-        "buffsLose": [12],
-        "item": false
-      },
-      {
-        "desc": "Zacznij uciekać jak tchórz.",
-        "chance": 0,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "To nie była mądra decyzja. Duch obsypał cię gradem szybkich ciosów, tak zwana bomba na banie i balet skończony, po czym zawył jak opętany i zniknął.",
-        "lose": "To nie była mądra decyzja. Duch obsypał cię gradem szybkich ciosów, tak zwana bomba na banie i balet skończony, po czym zawył jak opętany i zniknął.",
-        "statsWin": [-20, -20, -20, -20, -20, -20, -50],
-        "statsLose": [-20, -20, -20, -20, -20, -20, -50],
-        "buffsWin": [7, 8, 9, 10, 11, 12],
-        "buffsLose": [7, 8, 9, 10, 11, 12],
-        "item": false
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "desc": "Na twojej drodze znalazłeś porzuconą skrzynię. Zastanawiałeś się czemu ktoś mógł porzucić ją w tym miejscu.",
-    "locations": [0, 2, 4, 5],
-    "choices":
-    [
-      {
-        "desc": "Otwórz skrzynię.",
-        "chance": 0.2,
-        "flags": [0, 0, 0.1, 0, 0, 0, 0],
-        "win": "Opłaciło się. Znalazłeś trochę złota i przedmiot.",
-        "lose": "Niesamowite... Pułapka... No kto mógł się domyślić? Bandyci wzięli cię z zaskoczenia i obrabowali cię ze złota i lekko poturbowali. Kontynuowałeś podróż.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, 0, -30],
-        "buffsWin": [],
-        "buffsLose": [10, 12],
-        "item": true
-      },
-      {
-        "desc": "Zostaw ją gdyż może to być pułapka.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Racjonalne podejście. Nie ma co ryzykować. Zawsze mogła to być pułapka. Minąłeś skrzynię i ruszyłeś dalej.",
-        "lose": "Racjonalne podejście. Nie ma co ryzykować. Zawsze mogła to być pułapka. Minąłeś skrzynię i ruszyłeś dalej.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 4,
-    "desc": "Na twojej drodze natrafiłeś na opuszczony dom. Dokładnie go zbadałeś z zewnątrz. Dom był w opłakanym stanie. Wyglądał na taki, który w każdej chwili może się na ciebie zawalić. ",
-    "locations": [0, 4, 5, 6],
-    "choices":
-    [
-      {
-        "desc": "Wejdź do opuszczonego domu.",
-        "chance": 0.2,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Opłaciło się. Znalazłeś trochę złota i przedmiot. Po zebraniu lootu, nie czekałeś na nieszczęście i w pośpiechu opuściłeś chatę.",
-        "lose": "Rozejrzałeś się po chacie, ale nic w niej nie znalazłeś. Obwróciłeś się w stronę wyjścia i po przemierzeniu kilku kroków, spadła na ciebie belka ze stropu, która wybiła ci obojczyk. Jęknąłeś z bólu i w pośpiechu opuściłeś domostwo.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, -3, 0, -5, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [10, 12],
-        "item": true
-      },
-      {
-        "desc": "Nie wchodź do opuszczonego domu.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Chciwość nie zawsze popłaca, więc tym razem uznałeś, że nie ma sensu ryzykować zdrowia. Kontynuowałeś podróż.",
-        "lose": "Chciwość nie zawsze popłaca, więc tym razem uznałeś, że nie ma sensu ryzykować zdrowia. Kontynuowałeś podróż.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 5,
-    "desc": "Poczułeś swąd dymu w powietrzu i postanowiłeś się rozejrzeć. Z daleka ujrzałeś płonący budynek i udałeś się w jego stronę. Podchodząc bliżej usłyszałeś zrozpaczone krzyki dochodzące z wewnątrz domu.",
-    "locations": [0, 5, 6, 8],
-    "choices":
-    [
-      {
-        "desc": "Wejdź do domu i spróbuj ocalić ludzi.",
-        "chance": 0.2,
-        "flags": [0.15, 0.15, 0.15, 0, 0, 0, 0],
-        "win": "Przyłożyłeś rękę do ust i jak bohater wparowałeś do domu. Szedłeś na oślep, kierując się dźwiękiem. Sprawną akcją udało ci się wydostać osoby z budynku.",
-        "lose": "Przyłożyłeś rękę do ust i jak bohater wparowałeś do domu. Szedłeś na oślep, kierując się dźwiękiem. Napotkałeś jednak przeszkodę, a próbując ją przesunąć oparzyłeś się. Zaczęło ci brakować powietrza, więc czym prędzej opuściłeś budynek.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, -3, 0, -5, 0, 0, 0],
-        "buffsWin": [1, 2, 3, 4, 5, 6],
-        "buffsLose": [10, 12],
-        "item": true
-      },
-      {
-        "desc": "Nie reaguj.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Stanowłeś pod budynkiem i czekałeś na rozwój wypadków. Po kilku minutach do wnętrza wparowała ekipa ratunkowa, ale było już za późno.",
-        "lose": "Stanowłeś pod budynkiem i czekałeś na rozwój wypadków. Po kilku minutach do wnętrza wparowała ekipa ratunkowa, ale było już za późno.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [12],
-        "buffsLose": [12],
-        "item": false
-      },
-      {
-        "desc": "Wejdź do domu w celu rabunkowym.",
-        "chance": 0.2,
-        "flags": [0, 0, 0.1, 0, 0, 0, 0],
-        "win": "Przyłożyłeś rękę do ust i wparowałeś do domu. Szedłeś na oślep, szukając wartościowych rzeczy. Po krótkim rekonesansie znalazłeś kilka wartościowych rzeczy i czym prędzej opuściłeś budynek.",
-        "lose": "Przyłożyłeś rękę do ust i wparowałeś do domu. Szedłeś na oślep, szukając wartościowych rzeczy. Napotkałeś jednak przeszkodę, a próbując ją przesunąć oparzyłeś się. Zaczęło ci brakować powietrza, więc czym prędzej opuściłeś budynek.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 30],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [7, 8, 9, 11],
-        "buffsLose": [10, 12],
-        "item": true
-      }
-   ]
-  },
-  {
-    "id": 6,
-    "desc": "Spacerując dostałeś propozycję uczestnictwa w turnieju rzutów toporami do celu.",
-    "locations": [1, 3, 5, 8],
-    "choices":
-    [
-      {
-        "desc": "Zignoruj propozycję.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
-        "lose": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Przystąp do turnieju amatorów.",
-        "chance": 0.2,
-        "flags": [0, 0.3, 0, 0, 0, 0, 0],
-        "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
-        "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, 0, -10],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Przystąp do turnieju profesjonalistów.",
-        "chance": 0.1,
-        "flags": [0, 0.2, 0, 0, 0, 0, 0],
-        "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
-        "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, -10],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": true
-      }
-   ]
-  },
-  {
-    "id": 7,
-    "desc": "Spacerując dostałeś propozycję uczestnictwa w turnieju gry w kości.",
-    "locations": [1, 3, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Zignoruj propozycję.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
-        "lose": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Przystąp do turnieju amatorów.",
-        "chance": 0.2,
-        "flags": [0, 0, 0.3, 0, 0, 0, 0],
-        "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
-        "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, 0, -10],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Przystąp do turnieju profesjonalistów.",
-        "chance": 0.1,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
-        "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, -10],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": true
-      }
-   ]
-  },
-  {
-    "id": 8,
-    "desc": "Spacerując dostałeś propozycję uczestnictwa w turnieju siłowania na rękę.",
-    "locations": [1, 3, 6, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Zignoruj propozycję.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
-        "lose": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Przystąp do turnieju amatorów.",
-        "chance": 0.2,
-        "flags": [0.3, 0, 0, 0, 0, 0, 0],
-        "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
-        "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, 0, -10],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Przystąp do turnieju profesjonalistów.",
-        "chance": 0.1,
-        "flags": [0.2, 0, 0, 0, 0, 0, 0],
-        "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
-        "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, -10],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": true
-      }
-   ]
-  },
-  {
-    "id": 9,
-    "desc": "Natrafiłeś na konwój uroczyście ubranych ludzi. Szli w stronę miejsca, z którego dało się usłyszeć muzykę żałobną. Podążyłeś ich śladem i dotarłeś na pogrzeb.",
-    "locations": [1, 3, 6, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Pay respect.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Wcisnąłeś F i w ciszy odszedłeś z tego miejsca.",
-        "lose": "Wcisnąłeś F i w ciszy odszedłeś z tego miejsca.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [6],
-        "buffsLose": [6],
-        "item": false
-      },
-      {
-        "desc": "Okradnij trupa.",
-        "chance": 0.01,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Szansa była niewielka, ale podszedłeś do trupa i udając, że chcesz się z nim pożegnać, okradłeś go i odeszłeś.",
-        "lose": "Żałobnicy, zobaczywszy takie zachowanie, byli gotowi urządzić sobie drugi pogrzeb, którego gwoździem programu będziesz ty. Po długiej walce i otrzymaniu wielu obrażeń, cudem udało ci się wydostać z opresji.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, 0, -20],
-        "buffsWin": [12],
-        "buffsLose": [7, 8, 9, 10, 11, 12],
-        "item": true
-      }
-   ]
-  },
-  {
-    "id": 10,
-    "desc": "W twoim kierunku podążała siwa postać, w całym rynstunku, z dwoma mieczami na plecach i medalionem na piersi w kształcie wilka.\n Mam na ciebie zlecenie - oznajmił tajemniczy mężczyzna.",
-    "locations": [0, 1, 2, 3, 4, 5, 6, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Broń się.",
-        "chance": 0.1,
-        "flags": [0.1, 0.1, 0.1, 0, 0, 0, 0],
-        "win": "Walka była długa,a twój przeciwnik, mimo że był profesjonalistą, musiał uznać twoją wyższość i się wycofać. Tym razem wygrałeś ale wiedziałeś, że mężczyzna będzie podążał twoim tropem.",
-        "lose": "Walka była krótka. Twój przeciwnik był profesjonalistą, a ty nie miałeś z nim szans. Cudem udało ci się ujść z życiem ale wiedziałeś, że mężczyzna będzie podążał twoim tropem.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [4, 5, 6, 7, 8, 9],
-        "buffsLose": [7, 8, 9, 10, 11, 12],
-        "item": false
-      },
-      {
-        "desc": "Spróbuj się dogadać.",
-        "chance": 0.1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Spróbowałeś swojej siły perswazji ale oponent był nieugięty. Wyciągnąłeś broń. Walka była długa,a twój przeciwnik, mimo że był profesjonalistą, musiał uznać twoją wyższość i się wycofać. Tym razem wygrałeś ale wiedziałeś, że mężczyzna będzie podążał twoim tropem.",
-        "lose": "Spróbowałeś swojej siły perswazji ale oponent był nieugięty. Wyciągnąłeś broń. Walka była krótka. Twój przeciwnik był profesjonalistą, a ty nie miałeś z nim szans. Cudem udało ci się ujść z życiem ale wiedziałeś, że mężczyzna będzie podążał twoim tropem.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [4, 5, 6, 7, 8, 9],
-        "buffsLose": [7, 8, 9, 10, 11, 12],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 11,
-    "desc": "Podróżując traktem napotkałeś złamane drzewo.",
-    "locations": [0, 4, 5],
-    "choices":
-    [
-      {
-        "desc": "Przesuń drzewo i odblokuj trakt.",
-        "chance": 0.5,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Podczas przesuwania drzewa nie napotkałeś większych kłopotów. Nieco się skaleczyłeś ale po usunięciu drzewa z traktu wyruszyłeś dalej.",
-        "lose": "Swoją uwagę skupiłeś głównie na drzewie i nieco straciłeś czujność. Gdy usłyszałeś hałas było już za późno. To była zasadzka. Bandyci byli ze wszystkich stron. Z trudem udało ci się ich odeprzeć ale zgarnąłeś trochę przedmiotów.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [2, 2, 2, 0, 0, 0, 20],
-        "buffsWin": [],
-        "buffsLose": [1, 2, 3, 10, 11, 12],
-        "item": false
-      },
-      {
-        "desc": "Znajdź inne przejście.",
-        "chance": 0.1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Zapuściłeś się głębiej i trochę to zajęło, ale w końcu udało ci się trafić na trakt po drugiej stronie. Kontynuowałeś podróż.",
-        "lose": "Zapuściłeś się głębiej i nie działo się nic złego, więc nieco straciłeś czujność. Gdy usłyszałeś hałas było już za późno. To była zasadzka. Bandyci byli ze wszystkich stron. Z trudem udało ci się ich odeprzeć ale zgarnąłeś trochę przedmiotów.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [1, 2, 3, 10, 11, 12],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 12,
-    "desc": "Podróżując traktem twoją drogę zablokowała rzeka.",
-    "locations": [0, 4, 5],
-    "choices":
-    [
-      {
-        "desc": "Poszukaj łodzi.",
-        "chance": 0.3,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Miałeś szczęście. Już po kilku minutach szukania udało ci się znaleźć łódź. Przeprawiłeś się na drugą stronę i kontynuowałeś podróż.",
-        "lose": "Szukałeś łodzi dobre pół dnia- bezskutecznie. Znudzony poszukiwaniami postanowiłeś przepłynąć rzekę wpław i kontynuować podróż.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [1, 2, 3],
-        "buffsLose": [11],
-        "item": false
-      },
-      {
-        "desc": "Płyń wpław.",
-        "chance": 0.25,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Miałeś szczęście. Rzeka była wyjątkowo spokojna i udało ci się dostać na drugą stronę i kontynuować podróż.",
-        "lose": "Była to rwąca rzeka, mimo to zaryzykowałeś popłynięcie wpław. W miejscu, w którym rzeka była najgłębsza, porwał cię prąd i zacząłeś się topić. Nurt wrzucił cię na wystający konar i złamał ci żebra. Plus był taki, że byłeś po drugiej stronie. Obolały kontynuowałeś podróż.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [10, 12],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 13,
-    "desc": "Twoim oczom ukazał się troll. Było to niezwylke potężne stworzenie, które wyglądło na niebezpieczne.",
-    "locations": [0, 4, 5],
-    "choices":
-    [
-      {
-        "desc": "Porozmawiaj z trollem.",
-        "chance": 0.5,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Po krótkiej rozmowie troll okazał się nie być trollem, a jedynie manekinem umieszczonym przez innego trolla - żartownisia, który lubił straszyć ludzi podróżujących tym miejscem. Minąłeś go i kontynuowałeś odyseję.",
-        "lose": "Troll nie był zbytnio wygadaną postacią i po krótkiej rozmowie, zmęczył się nią. Zdenerwowany zaatakował cię, a ty byłeś zmuszony się bronić. Udało ci się uniknąć niektórych ataków trolla i mu uciec.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, -8, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [10, 11, 12],
-        "item": false
-      },
-      {
-        "desc": "Zaatakuj trolla.",
-        "chance": 0.25,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Troll nie był mądrą postacią, ale zrozumiał, że nie ma z tobą szans. Zaczął uciekać w podskokach, a ty ruszyłeś w swoją stronę.",
-        "lose": "Zaatakowałeś, ale nie była to mądra decyzja. Troll okazał się silniejszy niż sądziłeś. Zacząłeś się powoli wycofywać, aż udało ci się zbiec trollowi.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, -2, 0, -4, 0, 0, 0],
-        "buffsWin": [1, 2],
-        "buffsLose": [10, 12],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 14,
-    "desc": "Twoją drogę zagrodziło dwóch pijanych awanturników. Zażądali od ciebie złota na dalsze picie.",
-    "locations": [1, 3, 6, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Oddaj im złoto.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Usłyszałeś: Księciuniu, dzięki za złoto. Zanim opszedłeś w swoją stronę, obserwowałeś dwóch staczających się mężczyzn idących w stronę pobliskiej karczmy.",
-        "lose": "Usłyszałeś: Księciuniu, dzięki za złoto. Zanim opszedłeś w swoją stronę, obserwowałeś dwóch staczających się mężczyzn idących w stronę pobliskiej karczmy.",
-        "statsWin": [0, 0, 0, 0, 0, 0, -10],
-        "statsLose": [0, 0, 0, 0, 0, 0, -10],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Zaatakuj ich.",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Walka była tak łatwa jak zabranie dziecku lizaka. Bez trudu pokonałeś meneli i poszedłeś w swoją stronę.",
-        "lose": "Walka była tak łatwa jak zabranie dziecku lizaka. Bez trudu pokonałeś meneli i poszedłeś w swoją stronę.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, 0, 0, 0, 10],
-        "buffsWin": [1, 2, 3, 12],
-        "buffsLose": [1, 2, 3, 12],
-        "item": true
-      },
-      {
-        "desc": "Przyłącz się do nich jako ich kompan do picia.",
-        "chance": 0.25,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Wyciągnąłeś własną butelkę i poczęstowałeś kompanów. Spędziłeś resztę wieczoru słuchając rozmaitych plotek i opowieści. Po zabawie zostawiłeś towarzyszy i udałeś się w swoją stronę.",
-        "lose": "Wyciągnąłeś własną butelkę i poczęstowałeś kompanów. Spędziłeś resztę wieczoru słuchając rozmaitych plotek i opowieści. Po zabawie zostawiłeś towarzyszy i udałeś się w swoją stronę, jednakże jak odszedłeś to zorientowałeś się, że w twoim mieszku brakuje nieco złota.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, -5, 0, 0, 0, -10],
-        "buffsWin": [1, 2, 3, 11],
-        "buffsLose": [11, 12],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 15,
-    "desc": "Przemierzając ulicę usłyszałeś dziwne dźwięki dobiegające z zaułka.",
-    "locations": [3, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Omiń to miejsce",
-        "chance": 1,
-        "flags": [0, 0, 0, 0, 0, 0, 0],
-        "win": "Ciekawość to pierwszy stopień do piekła, więc wolałeś nie kusić losu i zwyczajnie minąłeś to miejsce.",
-        "lose": "Ciekawość to pierwszy stopień do piekła, więc wolałeś nie kusić losu i zwyczajnie minąłeś to miejsce.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      },
-      {
-        "desc": "Sprawdź co się tam dzieje.",
-        "chance": 0.25,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Znalazłeś pijanego leprechauna wracającego z imprezy z garncem złota u boku. Poprosiłeś go o garniec złota i poszedłeś dalej.",
-        "lose": "Z uliczki wybiegło stado dzikich psów i nim zdążyłeś usunąć się im z drogi to zdążyły cię poturbować.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [-3, -3, -3, -7, 0, -5, 0],
-        "buffsWin": [1, 2, 3],
-        "buffsLose": [12],
-        "item": true
-      }
-   ]
-  },
-  {
-    "id": 16,
-    "desc": "Przebierzając dzikie tereny, każdemu zdarza się czasem zgubić lub wpaść w niebezpieczeństwo. Ty zaplątałeś się w olbrzymią sieć pająka.",
-    "locations": [2, 4, 5],
-    "choices":
-    [
-      {
-        "desc": "Zachowaj spokój i rozplątuj się powoli",
-        "chance": 0.4,
-        "flags": [0.1, 0.1, 0.1, 0, 0, 0, 0],
-        "win": "Zajęło ci to bardzo wolno, ale powoli i skutecznie udało ci się wydostać i lekko przerażony tym co mogło ci się stać, ruszyłeś w swoją stronę.",
-        "lose": "Nie zdążyłeś się rozplątać, a przyszedł właściciel sieci. Był nim olbrzymi, trujący pająk. Co prawda widok ten sprawił, że udało ci się wydostać, to podczas ucieczki zostałeś ukąszony przez niego w ramię.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [-3, -3, -3, -3, -3, -3, -5],
-        "buffsWin": [11, 12],
-        "buffsLose": [12],
-        "item": false
-      },
-      {
-        "desc": "Spróbuj się jak najszybciej uwolnić.",
-        "chance": 0.1,
-        "flags": [0.1, 0.1, 0.1, 0, 0, 0, 0],
-        "win": "Poczułeś wielki zastrzyk odwagi i determinacji, po czym szybko wydostałeś się z sieci i dziarsko ruszyłeś w dalszą odyseję.",
-        "lose": "Nie zdążyłeś się rozplątać, a przyszedł właściciel sieci. Był nim olbrzymi, trujący pająk. Co prawda widok ten sprawił, że udało ci się wydostać, to podczas ucieczki zostałeś ukąszony przez niego w ramię.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [-3, -3, -3, -3, -3, -3, -5],
-        "buffsWin": [1, 2, 3],
-        "buffsLose": [7, 8, 9, 10, 11, 12],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 17,
-    "desc": "Podróżując traktem usłyszałeś za sobą dziwne dźwięki. Odwórciłeś się ale nikogo za tobą nie było. Gdy spojrzałeś przed siebie zdołałeś kontem oka uchwycić strzałę lecącą w twoją głowę. W ostatniej chwili udało ci się uskoczyć.",
-    "locations": [0, 2, 4, 5],
-    "choices":
-    [
-      {
-        "desc": "Staw czoła niebezpieczeństwu.",
-        "chance": 0.1,
-        "flags": [0.2, 0.2, 0.2, 0, 0, 0, 0],
-        "win": "Nie bałeś się stawić czoła niebezpieczeństwu, wyciągnąłeś broń i poczekałeś na swoich oprawców. Było ich czterech ale nie byli oni jacyś silni. Dałeś sobie z nimi radę bez problemu i kontynuowałeś podróż.",
-        "lose": "Nie bałeś się stawić czoła niebezpieczeństwu, wyciągnąłeś broń i poczekałeś na swoich oprawców. Było ich czterech. Dałeś sobie z nimi radę z lekkimi problemami i kontynuowałeś podróż.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 10],
-        "statsLose": [0, 0, 0, -8, -3, 0, 5],
-        "buffsWin": [],
-        "buffsLose": [10, 11],
-        "item": true
-      },
-      {
-        "desc": "Spróbuj uciec",
-        "chance": 0.2,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Zacząłeś uciekać przerażony, a za sobą usłyszałeś donośny śmiech bandytów, którzy zastawili tu pułapkę. Wróciłeś na trakt w bezpiecznym miejscu i kontynuowałeś podróż.",
-        "lose": "Zacząłeś uciekać przerażony, a za sobą usłyszałeś donośny śmiech bandytów, którzy zastawili tu pułapkę. Nie uciekłeś daleko, a potknąłeś się o coś wystajacego z ziemi. Bandyci zaczęli śmiać się jeszcze głośniej, a ty kontynuowałeś ucieczkę.",
-        "statsWin": [0, 0, 0, 0, 0, -7, 10],
-        "statsLose": [0, -2, 0, -4, 0, -10, -5],
-        "buffsWin": [12],
-        "buffsLose": [10, 11, 12],
-        "item": false
-      }
-   ]
-  },
-  {
-    "id": 18,
-    "desc": "",
-    "locations": [1, 3, 6, 7, 8],
-    "choices":
-    [
-      {
-        "desc": "Kup przedmiot.",
-        "chance": 0,
-        "flags": [0, 0, 0, 0, 0, 0, 5],
-        "win": "Miałeś we krwi żyłkę hazardową, więc od razu się zgodziłeś. Sklepikarz uciekł z twoim złotem, zanim zdążyłeś się rozmyślić, więc ruszyłeś w dalszy szlak.",
-        "lose": "Ty biedaku nawet złota nie masz - powiedział sklepikarz, a ty ze smutkiem kontynuowałeś swoją podróż.",
-        "statsWin": [0, 0, 0, 0, 0, 0, -20],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": true
-      },
-      {
-        "desc": "Spróbuj ukraść przedmiot.",
-        "chance": 0.2,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Próba kradzieży zakończyła się powodzeniem. Oddaliłeś się szybko zanim kupiec zdąży się zorientować i ruszyłeś w swoją stronę.",
-        "lose": "Próba kradzieży zakończyła się niepowodzeniem. W momencie, w którym przyuważył cię sklepikarz, dostałeś mocne uderzenie pałką przez łeb. Uciekłeś z podkulonym ogonem.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [10],
-        "item": true
-      },
-      {
-        "desc": "Nie jesteś zainteresowany.",
-        "chance": 1,
-        "flags": [0, 0, 0.2, 0, 0, 0, 0],
-        "win": "Nie byłeś zainteresowany kupnem przedmiotu u handlarza, ani próbą kradzieży, więc go opuściłeś i kontynuowałeś podróż.",
-        "lose": "Nie byłeś zainteresowany kupnem przedmiotu u handlarza, ani próbą kradzieży, więc go opuściłeś i kontynuowałeś podróż.",
-        "statsWin": [0, 0, 0, 0, 0, 0, 0],
-        "statsLose": [0, 0, 0, 0, 0, 0, 0],
-        "buffsWin": [],
-        "buffsLose": [],
-        "item": false
-      }
-   ]
-  }
+    {
+        "id": -4,
+        "desc": "Psycha siada. To już koniec. Stwierdziłeś, że dłużej nie zniesiesz błąkania po świecie. Postanowiłeś rzucić to wszystko i pojechać w Bieszczady.",
+        "locations": [],
+        "choices": []
+    },
+    {
+        "id": -3,
+        "desc": "Z każdym kolejnym krokiem odczuwałeś coraz większe zmęczenie wędrówką ale ten, który postawiłeś, był twoim ostatnim. Padłeś ze zmęczenia na ziemię i tak skończyła się twoja przygoda.",
+        "locations": [],
+        "choices": []
+    },
+    {
+        "id": -2,
+        "desc": "Po otrzymaniu ostatnich obrażeń poczułeś jak powoli uchodzi z ciebie życie. A więc tak wygląda koniec, pomyślałeś. Zadowolony, że dane ci było przeżyć jeszcze kilka przygód, pożeganłeś się ze światem i upadłeś bez życia.",
+        "locations": [],
+        "choices": []
+    },
+    {
+        "id": -1,
+        "desc": "Nie próbuj wstawać, bo tylko pogorszysz swoją sytuację. Gdzie jesteś i kim jesteś to nieistotne. Posłuchaj mnie bardzo uważnie. Rzucę na ciebie zaklęcie, które sprawi, że przeżyjesz, jednakże ma ono jeden efekt uboczny. Po jego działaniu będziesz skazany na tułaczkę po świecie, aż do końca swoich dni.",
+        "locations": [ -1 ],
+        "choices": [
+            {
+                "desc": "Zgódź się na rzucenie zaklęcia.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, doznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
+                "lose": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, doznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Nie zgadzaj się na rzucenie zaklęcia.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, doznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
+                "lose": "Nieznajomy jednak nie czekał na twoją odpowiedź i nim zdążyłeś zadecydować, kończył już rzucać zaklęcie. Po wypowiedzeniu ostatniego słowa magicznej formuły, doznałeś ogromnego bólu przeszywającego twoje ciało. Był tak nie do zniesienia, że po krótkiej chwili straciłeś przytomność.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 0,
+        "desc": "Spotykasz nieznajomego, którego nigdy w życiu nie widziałeś, ale on twierdzi, że raz uratował ci życie. Wyglądał na osobę, z którą nie chcesz mieć na pieńku, a w dowód wdzięczności żąda od ciebie złota.",
+        "locations": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Oddaj 20 złota.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Nieznajomy z szyderczym uśmiechem podziękował za złoto, po czym zniknął tak szybko jak się pojawił. Wzruszyłeś ramionami i lekko poddenerwowany utratą złota ruszyłeś dalej.",
+                "lose": "Nieznajomy z szyderczym uśmiechem podziękował za złoto, po czym zniknął tak szybko jak się pojawił. Wzruszyłeś ramionami i lekko poddenerwowany utratą złota ruszyłeś dalej.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, -20 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -20 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Zasugeruj rzut monetą o podwójną stawkę.",
+                "chance": 0.3,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Wygrałeś rzut monetą. Nieznajomy obszedł się smakiem i zniknął tak szybko jak się pojawił. Zadowolony, że zachowałeś złoto ruszyłeś dalej.",
+                "lose": "Przegrałeś rzut monetą. To będzie 40 złota - oznajmił nieznajomy, który z szyderczym uśmiechem podziękował, po czym zniknął tak szybko jak się pojawił. Zdenerwowany utratą złota ruszyłeś dalej.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -40 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Zasugeruj, że zapłacisz za swoje złoto krwią - otrzymując obrażenia",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Nieznajomego zdziwiła twoja prośba, ale po chwili rozmyślania z uśmiechem przyjął swoją propozycję. Wyjął sztylet, którym rozciął twoją droń i fiolkę, do któej zebrał trochę twojej krwi. Odszedł śmiejąc się złowrogo, a ty z uszczerbkiem na psychice, ruszyłeś dalej.",
+                "lose": "Nieznajomego zdziwiła twoja prośba, ale po chwili rozmyślania z uśmiechem przyjął swoją propozycję. Wyjął sztylet, którym rozciął twoją droń i fiolkę, do któej zebrał trochę twojej krwi. Odszedł śmiejąc się złowrogo, a ty z uszczerbkiem na psychice, ruszyłeś dalej.",
+                "statsWin": [ 0, 0, 0, -5, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, -5, 0, 0, 0 ],
+                "buffsWin": [ 12 ],
+                "buffsLose": [ 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "desc": "Spotkałeś dżina, który spełni twoje jedno życzenie. Pewnie się zastanawiasz czemu jedno. No cóż, nawet dżinom zdarzają się gorsze dni, a ty uznałeś, że darowanemu koniowi się w zęby nie zagląda i wypowiedziałeś życzenie.",
+        "locations": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Chcę być silny.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "statsWin": [ 2, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ -2, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Chcę być odporny.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "statsWin": [ 0, 2, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, -2, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Chcę mieć więcej szczęścia w życiu.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "statsWin": [ 0, 0, 2, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, -2, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Chcę być wytrzymały.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "statsWin": [ 0, 0, 0, 4, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, -4, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Chcę mniej się męczyć.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "statsWin": [ 0, 0, 0, 0, 4, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, -4, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Chcę mieć mocną psychę.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "statsWin": [ 0, 0, 0, 0, 0, 4, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, -4, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Chcę być bogaty.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Chcę dostać losowy przedmiot.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "desc": "Spotykasz ducha, która wygląda tak samo jak ty. Przyzwyczaiłeś się do widywania dziwnych rzeczy ale coś takiego zawsze będzie cię zaskakiwać. Zostałeś wyzwany na pojedynek, w którym możesz wybrać zasady walki,",
+        "locations": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Zniszcz cel atakując go.",
+                "chance": 0.5,
+                "flags": [ 0.2, 0, 0, 0, 0, 0, 0 ],
+                "win": "Zrobiłeś mocny zamach i udało ci się zniszczyć cel. Duch dał ci złoto w nagrodę i zniknął.",
+                "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, -2, 0 ],
+                "buffsWin": [],
+                "buffsLose": [ 12 ],
+                "item": false
+            },
+            {
+                "desc": "Zablokuj atak ducha.",
+                "chance": 0.5,
+                "flags": [ 0, 0.2, 0, 0, 0, 0, 0 ],
+                "win": "Duch wykonał uderzenie ale było ono tak słabe, że nawet do nie poczułeś. Duch dał ci złoto w nagrodę i zniknął.",
+                "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, -6, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [ 12 ],
+                "item": false
+            },
+            {
+                "desc": "Rzuć monetą.",
+                "chance": 0.5,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "To twój szczęśliwy dzień, wygrałeś rzut monetą. Duch dał ci złoto w nagrodę i zniknął.",
+                "lose": "Nie udało ci się. Duch zawył upiornie, gdy zrozumiał, że wygrał, a tobie zmroziło krew w żyłach. Upadłeś na ziemię i skuliłeś się w kłębek. Po chwili podniosłeś się, duch zniknął a poczucie wstydu zostało.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, -1, 0 ],
+                "buffsWin": [],
+                "buffsLose": [ 12 ],
+                "item": false
+            },
+            {
+                "desc": "Zacznij uciekać jak tchórz.",
+                "chance": 0,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "To nie była mądra decyzja. Duch obsypał cię gradem szybkich ciosów, tak zwana bomba na banie i balet skończony, po czym zawył jak opętany i zniknął.",
+                "lose": "To nie była mądra decyzja. Duch obsypał cię gradem szybkich ciosów, tak zwana bomba na banie i balet skończony, po czym zawył jak opętany i zniknął.",
+                "statsWin": [ -20, -20, -20, -20, -20, -20, -50 ],
+                "statsLose": [ -20, -20, -20, -20, -20, -20, -50 ],
+                "buffsWin": [ 7, 8, 9, 10, 11, 12 ],
+                "buffsLose": [ 7, 8, 9, 10, 11, 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "desc": "Na twojej drodze znalazłeś porzuconą skrzynię. Zastanawiałeś się czemu ktoś mógł porzucić ją w tym miejscu.",
+        "locations": [ 0, 2, 4, 5 ],
+        "choices": [
+            {
+                "desc": "Otwórz skrzynię.",
+                "chance": 0.2,
+                "flags": [ 0, 0, 0.1, 0, 0, 0, 0 ],
+                "win": "Opłaciło się. Znalazłeś trochę złota i przedmiot.",
+                "lose": "Niesamowite... Pułapka... No kto mógł się domyślić? Bandyci wzięli cię z zaskoczenia i obrabowali cię ze złota i lekko poturbowali. Kontynuowałeś podróż.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -30 ],
+                "buffsWin": [],
+                "buffsLose": [ 10, 12 ],
+                "item": true
+            },
+            {
+                "desc": "Zostaw ją gdyż może to być pułapka.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Racjonalne podejście. Nie ma co ryzykować. Zawsze mogła to być pułapka. Minąłeś skrzynię i ruszyłeś dalej.",
+                "lose": "Racjonalne podejście. Nie ma co ryzykować. Zawsze mogła to być pułapka. Minąłeś skrzynię i ruszyłeś dalej.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "desc": "Na twojej drodze natrafiłeś na opuszczony dom. Dokładnie go zbadałeś z zewnątrz. Dom był w opłakanym stanie. Wyglądał na taki, który w każdej chwili może się na ciebie zawalić. ",
+        "locations": [ 0, 4, 5, 6 ],
+        "choices": [
+            {
+                "desc": "Wejdź do opuszczonego domu.",
+                "chance": 0.2,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Opłaciło się. Znalazłeś trochę złota i przedmiot. Po zebraniu lootu, nie czekałeś na nieszczęście i w pośpiechu opuściłeś chatę.",
+                "lose": "Rozejrzałeś się po chacie, ale nic w niej nie znalazłeś. Obwróciłeś się w stronę wyjścia i po przemierzeniu kilku kroków, spadła na ciebie belka ze stropu, która wybiła ci obojczyk. Jęknąłeś z bólu i w pośpiechu opuściłeś domostwo.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, -3, 0, -5, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [ 10, 12 ],
+                "item": true
+            },
+            {
+                "desc": "Nie wchodź do opuszczonego domu.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Chciwość nie zawsze popłaca, więc tym razem uznałeś, że nie ma sensu ryzykować zdrowia. Kontynuowałeś podróż.",
+                "lose": "Chciwość nie zawsze popłaca, więc tym razem uznałeś, że nie ma sensu ryzykować zdrowia. Kontynuowałeś podróż.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "desc": "Poczułeś swąd dymu w powietrzu i postanowiłeś się rozejrzeć. Z daleka ujrzałeś płonący budynek i udałeś się w jego stronę. Podchodząc bliżej usłyszałeś zrozpaczone krzyki dochodzące z wewnątrz domu.",
+        "locations": [ 0, 5, 6, 8 ],
+        "choices": [
+            {
+                "desc": "Wejdź do domu i spróbuj ocalić ludzi.",
+                "chance": 0.2,
+                "flags": [ 0.15, 0.15, 0.15, 0, 0, 0, 0 ],
+                "win": "Przyłożyłeś rękę do ust i jak bohater wparowałeś do domu. Szedłeś na oślep, kierując się dźwiękiem. Sprawną akcją udało ci się wydostać osoby z budynku.",
+                "lose": "Przyłożyłeś rękę do ust i jak bohater wparowałeś do domu. Szedłeś na oślep, kierując się dźwiękiem. Napotkałeś jednak przeszkodę, a próbując ją przesunąć oparzyłeś się. Zaczęło ci brakować powietrza, więc czym prędzej opuściłeś budynek.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, -3, 0, -5, 0, 0, 0 ],
+                "buffsWin": [ 1, 2, 3, 4, 5, 6 ],
+                "buffsLose": [ 10, 12 ],
+                "item": true
+            },
+            {
+                "desc": "Nie reaguj.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Stanąłeś pod budynkiem i czekałeś na rozwój wypadków. Po kilku minutach do wnętrza wparowała ekipa ratunkowa, ale było już za późno.",
+                "lose": "Stanąłeś pod budynkiem i czekałeś na rozwój wypadków. Po kilku minutach do wnętrza wparowała ekipa ratunkowa, ale było już za późno.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [ 12 ],
+                "buffsLose": [ 12 ],
+                "item": false
+            },
+            {
+                "desc": "Wejdź do domu w celu rabunkowym.",
+                "chance": 0.2,
+                "flags": [ 0, 0, 0.1, 0, 0, 0, 0 ],
+                "win": "Przyłożyłeś rękę do ust i wparowałeś do domu. Szedłeś na oślep, szukając wartościowych rzeczy. Po krótkim rekonesansie znalazłeś kilka wartościowych rzeczy i czym prędzej opuściłeś budynek.",
+                "lose": "Przyłożyłeś rękę do ust i wparowałeś do domu. Szedłeś na oślep, szukając wartościowych rzeczy. Napotkałeś jednak przeszkodę, a próbując ją przesunąć oparzyłeś się. Zaczęło ci brakować powietrza, więc czym prędzej opuściłeś budynek.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 30 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [ 7, 8, 9, 11 ],
+                "buffsLose": [ 10, 12 ],
+                "item": true
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "desc": "Spacerując dostałeś propozycję uczestnictwa w turnieju rzutów toporami do celu.",
+        "locations": [ 1, 3, 5, 8 ],
+        "choices": [
+            {
+                "desc": "Zignoruj propozycję.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
+                "lose": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Przystąp do turnieju amatorów.",
+                "chance": 0.2,
+                "flags": [ 0, 0.3, 0, 0, 0, 0, 0 ],
+                "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
+                "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Przystąp do turnieju profesjonalistów.",
+                "chance": 0.1,
+                "flags": [ 0, 0.2, 0, 0, 0, 0, 0 ],
+                "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
+                "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": true
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "desc": "Spacerując dostałeś propozycję uczestnictwa w turnieju gry w kości.",
+        "locations": [ 1, 3, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Zignoruj propozycję.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
+                "lose": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Przystąp do turnieju amatorów.",
+                "chance": 0.2,
+                "flags": [ 0, 0, 0.3, 0, 0, 0, 0 ],
+                "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
+                "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Przystąp do turnieju profesjonalistów.",
+                "chance": 0.1,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
+                "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": true
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "desc": "Spacerując dostałeś propozycję uczestnictwa w turnieju siłowania na rękę.",
+        "locations": [ 1, 3, 6, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Zignoruj propozycję.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
+                "lose": "Postanowiłeś jedynie przyglądać się zmaganiom. Prezentowany poziom był tak mierny, że z pewnością byś wygrał ale mówi się trudno.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Przystąp do turnieju amatorów.",
+                "chance": 0.2,
+                "flags": [ 0.3, 0, 0, 0, 0, 0, 0 ],
+                "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
+                "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Przystąp do turnieju profesjonalistów.",
+                "chance": 0.1,
+                "flags": [ 0.2, 0, 0, 0, 0, 0, 0 ],
+                "win": "Szło ci naprawdę dobrze. Wszyscy myśleli, że nie masz szans wygrać półfinału na SchowanegoWKrzakach ale udało ci się wygrać 3 do 2. Później finał był tak naprawdę formalnością i był bardzo jednostronny. Udało ci się wygrać turniej.",
+                "lose": "To był dobry turniej w twoim wykonaniu, ale nie znakomity. Niestety przegrałeś walkę w finale 3 do 0 z członikem klanu fenixa i zabawy. Mogło być gorzej, zawsze mogłeś przegrać z zawodnikiem z NA.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": true
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "desc": "Natrafiłeś na konwój uroczyście ubranych ludzi. Szli w stronę miejsca, z którego dało się usłyszeć muzykę żałobną. Podążyłeś ich śladem i dotarłeś na pogrzeb.",
+        "locations": [ 1, 3, 6, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Pay respect.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Wcisnąłeś F i w ciszy odszedłeś z tego miejsca.",
+                "lose": "Wcisnąłeś F i w ciszy odszedłeś z tego miejsca.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [ 6 ],
+                "buffsLose": [ 6 ],
+                "item": false
+            },
+            {
+                "desc": "Okradnij trupa.",
+                "chance": 0.01,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Szansa była niewielka, ale podszedłeś do trupa i udając, że chcesz się z nim pożegnać, okradłeś go i odeszłeś.",
+                "lose": "Żałobnicy, zobaczywszy takie zachowanie, byli gotowi urządzić sobie drugi pogrzeb, którego gwoździem programu będziesz ty. Po długiej walce i otrzymaniu wielu obrażeń, cudem udało ci się wydostać z opresji.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -20 ],
+                "buffsWin": [ 12 ],
+                "buffsLose": [ 7, 8, 9, 10, 11, 12 ],
+                "item": true
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "desc": "W twoim kierunku podążała siwa postać, w całym rynstunku, z dwoma mieczami na plecach i medalionem na piersi w kształcie wilka.\n Mam na ciebie zlecenie - oznajmił tajemniczy mężczyzna.",
+        "locations": [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Broń się.",
+                "chance": 0.1,
+                "flags": [ 0.1, 0.1, 0.1, 0, 0, 0, 0 ],
+                "win": "Walka była długa, a twój przeciwnik, mimo że był profesjonalistą, musiał uznać twoją wyższość i się wycofać. Tym razem wygrałeś ale wiedziałeś, że mężczyzna będzie podążał twoim tropem.",
+                "lose": "Walka była krótka. Twój przeciwnik był profesjonalistą, a ty nie miałeś z nim szans. Cudem udało ci się ujść z życiem ale wiedziałeś, że mężczyzna będzie podążał twoim tropem.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [ 4, 5, 6, 7, 8, 9 ],
+                "buffsLose": [ 7, 8, 9, 10, 11, 12 ],
+                "item": false
+            },
+            {
+                "desc": "Spróbuj się dogadać.",
+                "chance": 0.1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Spróbowałeś swojej siły perswazji ale oponent był nieugięty. Wyciągnąłeś broń. Walka była długa,a twój przeciwnik, mimo że był profesjonalistą, musiał uznać twoją wyższość i się wycofać. Tym razem wygrałeś ale wiedziałeś, że mężczyzna będzie podążał twoim tropem.",
+                "lose": "Spróbowałeś swojej siły perswazji ale oponent był nieugięty. Wyciągnąłeś broń. Walka była krótka. Twój przeciwnik był profesjonalistą, a ty nie miałeś z nim szans. Cudem udało ci się ujść z życiem ale wiedziałeś, że mężczyzna będzie podążał twoim tropem.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [ 4, 5, 6, 7, 8, 9 ],
+                "buffsLose": [ 7, 8, 9, 10, 11, 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "desc": "Podróżując traktem napotkałeś złamane drzewo.",
+        "locations": [ 0, 4, 5 ],
+        "choices": [
+            {
+                "desc": "Przesuń drzewo i odblokuj trakt.",
+                "chance": 0.5,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Podczas przesuwania drzewa nie napotkałeś większych kłopotów. Nieco się skaleczyłeś ale po usunięciu drzewa z traktu wyruszyłeś dalej.",
+                "lose": "Swoją uwagę skupiłeś głównie na drzewie i nieco straciłeś czujność. Gdy usłyszałeś hałas było już za późno. To była zasadzka. Bandyci byli ze wszystkich stron. Z trudem udało ci się ich odeprzeć ale zgarnąłeś trochę przedmiotów.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 2, 2, 2, 0, 0, 0, 20 ],
+                "buffsWin": [],
+                "buffsLose": [ 1, 2, 3, 10, 11, 12 ],
+                "item": false
+            },
+            {
+                "desc": "Znajdź inne przejście.",
+                "chance": 0.1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Zapuściłeś się głębiej i trochę to zajęło, ale w końcu udało ci się trafić na trakt po drugiej stronie. Kontynuowałeś podróż.",
+                "lose": "Zapuściłeś się głębiej i nie działo się nic złego, więc nieco straciłeś czujność. Gdy usłyszałeś hałas było już za późno. To była zasadzka. Bandyci byli ze wszystkich stron. Z trudem udało ci się ich odeprzeć ale zgarnąłeś trochę przedmiotów.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [ 1, 2, 3, 10, 11, 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "desc": "Podróżując traktem twoją drogę zablokowała rzeka.",
+        "locations": [ 0, 4, 5 ],
+        "choices": [
+            {
+                "desc": "Poszukaj łodzi.",
+                "chance": 0.3,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Miałeś szczęście. Już po kilku minutach szukania udało ci się znaleźć łódź. Przeprawiłeś się na drugą stronę i kontynuowałeś podróż.",
+                "lose": "Szukałeś łodzi dobre pół dnia- bezskutecznie. Znudzony poszukiwaniami postanowiłeś przepłynąć rzekę wpław i kontynuować podróż.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [ 1, 2, 3 ],
+                "buffsLose": [ 11 ],
+                "item": false
+            },
+            {
+                "desc": "Płyń wpław.",
+                "chance": 0.25,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Miałeś szczęście. Rzeka była wyjątkowo spokojna i udało ci się dostać na drugą stronę i kontynuować podróż.",
+                "lose": "Była to rwąca rzeka, mimo to zaryzykowałeś popłynięcie wpław. W miejscu, w którym rzeka była najgłębsza, porwał cię prąd i zacząłeś się topić. Nurt wrzucił cię na wystający konar i złamał ci żebra. Plus był taki, że byłeś po drugiej stronie. Obolały kontynuowałeś podróż.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [ 10, 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "desc": "Twoim oczom ukazał się troll. Było to niezwylke potężne stworzenie, które wyglądło na niebezpieczne.",
+        "locations": [ 0, 4, 5 ],
+        "choices": [
+            {
+                "desc": "Porozmawiaj z trollem.",
+                "chance": 0.5,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Po krótkiej rozmowie troll okazał się nie być trollem, a jedynie manekinem umieszczonym przez innego trolla - żartownisia, który lubił straszyć ludzi podróżujących tym miejscem. Minąłeś go i kontynuowałeś odyseję.",
+                "lose": "Troll nie był zbytnio wygadaną postacią i po krótkiej rozmowie, zmęczył się nią. Zdenerwowany zaatakował cię, a ty byłeś zmuszony się bronić. Udało ci się uniknąć niektórych ataków trolla i mu uciec.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, -8, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [ 10, 11, 12 ],
+                "item": false
+            },
+            {
+                "desc": "Zaatakuj trolla.",
+                "chance": 0.25,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Troll nie był mądrą postacią, ale zrozumiał, że nie ma z tobą szans. Zaczął uciekać w podskokach, a ty ruszyłeś w swoją stronę.",
+                "lose": "Zaatakowałeś, ale nie była to mądra decyzja. Troll okazał się silniejszy niż sądziłeś. Zacząłeś się powoli wycofywać, aż udało ci się zbiec trollowi.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, -2, 0, -4, 0, 0, 0 ],
+                "buffsWin": [ 1, 2 ],
+                "buffsLose": [ 10, 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "desc": "Twoją drogę zagrodziło dwóch pijanych awanturników. Zażądali od ciebie złota na dalsze picie.",
+        "locations": [ 1, 3, 6, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Oddaj im złoto.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Usłyszałeś: Księciuniu, dzięki za złoto. Zanim opszedłeś w swoją stronę, obserwowałeś dwóch staczających się mężczyzn idących w stronę pobliskiej karczmy.",
+                "lose": "Usłyszałeś: Księciuniu, dzięki za złoto. Zanim opszedłeś w swoją stronę, obserwowałeś dwóch staczających się mężczyzn idących w stronę pobliskiej karczmy.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, -10 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Zaatakuj ich.",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Walka była tak łatwa jak zabranie dziecku lizaka. Bez trudu pokonałeś meneli i poszedłeś w swoją stronę.",
+                "lose": "Walka była tak łatwa jak zabranie dziecku lizaka. Bez trudu pokonałeś meneli i poszedłeś w swoją stronę.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "buffsWin": [ 1, 2, 3, 12 ],
+                "buffsLose": [ 1, 2, 3, 12 ],
+                "item": true
+            },
+            {
+                "desc": "Przyłącz się do nich jako ich kompan do picia.",
+                "chance": 0.25,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Wyciągnąłeś własną butelkę i poczęstowałeś kompanów. Spędziłeś resztę wieczoru słuchając rozmaitych plotek i opowieści. Po zabawie zostawiłeś towarzyszy i udałeś się w swoją stronę.",
+                "lose": "Wyciągnąłeś własną butelkę i poczęstowałeś kompanów. Spędziłeś resztę wieczoru słuchając rozmaitych plotek i opowieści. Po zabawie zostawiłeś towarzyszy i udałeś się w swoją stronę, jednakże jak odszedłeś to zorientowałeś się, że w twoim mieszku brakuje nieco złota.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, -5, 0, 0, 0, -10 ],
+                "buffsWin": [ 1, 2, 3, 11 ],
+                "buffsLose": [ 11, 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "desc": "Przemierzając ulicę usłyszałeś dziwne dźwięki dobiegające z zaułka.",
+        "locations": [ 3, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Omiń to miejsce",
+                "chance": 1,
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "win": "Ciekawość to pierwszy stopień do piekła, więc wolałeś nie kusić losu i zwyczajnie minąłeś to miejsce.",
+                "lose": "Ciekawość to pierwszy stopień do piekła, więc wolałeś nie kusić losu i zwyczajnie minąłeś to miejsce.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            },
+            {
+                "desc": "Sprawdź co się tam dzieje.",
+                "chance": 0.25,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Znalazłeś pijanego leprechauna wracającego z imprezy z garncem złota u boku. Poprosiłeś go o garniec złota i poszedłeś dalej.",
+                "lose": "Z uliczki wybiegło stado dzikich psów i nim zdążyłeś usunąć się im z drogi to zdążyły cię poturbować.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ -3, -3, -3, -7, 0, -5, 0 ],
+                "buffsWin": [ 1, 2, 3 ],
+                "buffsLose": [ 12 ],
+                "item": true
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "desc": "Przebierzając dzikie tereny, każdemu zdarza się czasem zgubić lub wpaść w niebezpieczeństwo. Ty zaplątałeś się w olbrzymią sieć pająka.",
+        "locations": [ 2, 4, 5 ],
+        "choices": [
+            {
+                "desc": "Zachowaj spokój i rozplątuj się powoli",
+                "chance": 0.4,
+                "flags": [ 0.1, 0.1, 0.1, 0, 0, 0, 0 ],
+                "win": "Zajęło ci to bardzo wolno, ale powoli i skutecznie udało ci się wydostać i lekko przerażony tym co mogło ci się stać, ruszyłeś w swoją stronę.",
+                "lose": "Nie zdążyłeś się rozplątać, a przyszedł właściciel sieci. Był nim olbrzymi, trujący pająk. Co prawda widok ten sprawił, że udało ci się wydostać, to podczas ucieczki zostałeś ukąszony przez niego w ramię.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ -3, -3, -3, -3, -3, -3, -5 ],
+                "buffsWin": [ 11, 12 ],
+                "buffsLose": [ 12 ],
+                "item": false
+            },
+            {
+                "desc": "Spróbuj się jak najszybciej uwolnić.",
+                "chance": 0.1,
+                "flags": [ 0.1, 0.1, 0.1, 0, 0, 0, 0 ],
+                "win": "Poczułeś wielki zastrzyk odwagi i determinacji, po czym szybko wydostałeś się z sieci i dziarsko ruszyłeś w dalszą odyseję.",
+                "lose": "Nie zdążyłeś się rozplątać, a przyszedł właściciel sieci. Był nim olbrzymi, trujący pająk. Co prawda widok ten sprawił, że udało ci się wydostać, to podczas ucieczki zostałeś ukąszony przez niego w ramię.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ -3, -3, -3, -3, -3, -3, -5 ],
+                "buffsWin": [ 1, 2, 3 ],
+                "buffsLose": [ 7, 8, 9, 10, 11, 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "desc": "Podróżując traktem usłyszałeś za sobą dziwne dźwięki. Odwórciłeś się ale nikogo za tobą nie było. Gdy spojrzałeś przed siebie zdołałeś kontem oka uchwycić strzałę lecącą w twoją głowę. W ostatniej chwili udało ci się uskoczyć.",
+        "locations": [ 0, 2, 4, 5 ],
+        "choices": [
+            {
+                "desc": "Staw czoła niebezpieczeństwu.",
+                "chance": 0.1,
+                "flags": [ 0.2, 0.2, 0.2, 0, 0, 0, 0 ],
+                "win": "Nie bałeś się stawić czoła niebezpieczeństwu, wyciągnąłeś broń i poczekałeś na swoich oprawców. Było ich czterech ale nie byli oni jacyś silni. Dałeś sobie z nimi radę bez problemu i kontynuowałeś podróż.",
+                "lose": "Nie bałeś się stawić czoła niebezpieczeństwu, wyciągnąłeś broń i poczekałeś na swoich oprawców. Było ich czterech. Dałeś sobie z nimi radę z lekkimi problemami i kontynuowałeś podróż.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 10 ],
+                "statsLose": [ 0, 0, 0, -8, -3, 0, 5 ],
+                "buffsWin": [],
+                "buffsLose": [ 10, 11 ],
+                "item": true
+            },
+            {
+                "desc": "Spróbuj uciec",
+                "chance": 0.2,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Zacząłeś uciekać przerażony, a za sobą usłyszałeś donośny śmiech bandytów, którzy zastawili tu pułapkę. Wróciłeś na trakt w bezpiecznym miejscu i kontynuowałeś podróż.",
+                "lose": "Zacząłeś uciekać przerażony, a za sobą usłyszałeś donośny śmiech bandytów, którzy zastawili tu pułapkę. Nie uciekłeś daleko, a potknąłeś się o coś wystajacego z ziemi. Bandyci zaczęli śmiać się jeszcze głośniej, a ty kontynuowałeś ucieczkę.",
+                "statsWin": [ 0, 0, 0, 0, 0, -7, 10 ],
+                "statsLose": [ 0, -2, 0, -4, 0, -10, -5 ],
+                "buffsWin": [ 12 ],
+                "buffsLose": [ 10, 11, 12 ],
+                "item": false
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "desc": "",
+        "locations": [ 1, 3, 6, 7, 8 ],
+        "choices": [
+            {
+                "desc": "Kup przedmiot.",
+                "chance": 0,
+                "flags": [ 0, 0, 0, 0, 0, 0, 5 ],
+                "win": "Miałeś we krwi żyłkę hazardową, więc od razu się zgodziłeś. Sklepikarz uciekł z twoim złotem, zanim zdążyłeś się rozmyślić, więc ruszyłeś w dalszy szlak.",
+                "lose": "Ty biedaku nawet złota nie masz - powiedział sklepikarz, a ty ze smutkiem kontynuowałeś swoją podróż.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, -20 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": true
+            },
+            {
+                "desc": "Spróbuj ukraść przedmiot.",
+                "chance": 0.2,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Próba kradzieży zakończyła się powodzeniem. Oddaliłeś się szybko zanim kupiec zdąży się zorientować i ruszyłeś w swoją stronę.",
+                "lose": "Próba kradzieży zakończyła się niepowodzeniem. W momencie, w którym przyuważył cię sklepikarz, dostałeś mocne uderzenie pałką przez łeb. Uciekłeś z podkulonym ogonem.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [ 10 ],
+                "item": true
+            },
+            {
+                "desc": "Nie jesteś zainteresowany.",
+                "chance": 1,
+                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "win": "Nie byłeś zainteresowany kupnem przedmiotu u handlarza, ani próbą kradzieży, więc go opuściłeś i kontynuowałeś podróż.",
+                "lose": "Nie byłeś zainteresowany kupnem przedmiotu u handlarza, ani próbą kradzieży, więc go opuściłeś i kontynuowałeś podróż.",
+                "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
+                "buffsWin": [],
+                "buffsLose": [],
+                "item": false
+            }
+        ]
+    }
 
 ]

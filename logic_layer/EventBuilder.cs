@@ -15,7 +15,7 @@ namespace RPG.logic_layer
         int lastId = -1;
         BuffBase[] _buffs { get; set; }
         Item[] _items { get; set; }
-
+        int _playerType { get; set; }
         public Location[] locations { get { return _locations; } }
         
         public EventBase[] events { get { return _events; } }
@@ -57,13 +57,11 @@ namespace RPG.logic_layer
             _items = items;
         }
 
-        public void Itemsss()
+        public void setPlayerType(int type)
         {
-            foreach (var VARIABLE in _items)
-            {
-                Console.WriteLine(VARIABLE._id);
-            }
+            _playerType = type;
         }
+
         private Location[] chooseLocations(int[] locations)
         {
             Random random = new();
@@ -73,7 +71,7 @@ namespace RPG.logic_layer
             {
                 while (true)
                 {
-                    int idLoc = random.Next(locations.Length - 1);
+                    int idLoc = random.Next(locations.Length);
                     bool found = false;
                     for (int j = 0; j < i; j++)
                     {
@@ -121,9 +119,13 @@ namespace RPG.logic_layer
                 Buff[] win = findBuffs(curr.buffsWin);
                 Buff[] lose = findBuffs(curr.buffsLose);
                 Item item = null;
-                if (curr.item) //TODO: Filtrowac po klasie
+                if (curr.item)
                 {
-                    item = _items[random.Next(_items.Length - 1)];
+                    item = _items[random.Next(_items.Length)];
+                    while(item.owner != 0 && item.owner != _playerType)
+                    {
+                        item = _items[random.Next(_items.Length)];
+                    }
                 }
                 res[i] = new Choice(curr.desc, curr.chance, curr.win, curr.lose, curr.statsWin, curr.statsLose, win, lose, curr.flags, item);
             }
@@ -139,7 +141,7 @@ namespace RPG.logic_layer
             Choice[] choices;
             while (true)
             {
-                int id = random.Next(_events.Length - 1);
+                int id = random.Next(_events.Length - 4);
                 if (id != lastId)
                 {
                     EventBase curr = _events.Single(_event => _event.id == id);
