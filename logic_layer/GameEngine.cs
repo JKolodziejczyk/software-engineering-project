@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace RPG.logic_layer
             BuffsAdapter buffs = new(eventBuilder);
             EventAdapter events = new(eventBuilder);
             LocationsAdapter locations = new(eventBuilder);
-            ItemsAdapter items = new();
+            ItemsAdapter items = new(eventBuilder);
         }
 
         public static GameEngine instance 
@@ -67,7 +68,6 @@ namespace RPG.logic_layer
             Console.WriteLine("1.Berserker");
             Console.WriteLine("2.Rycerz");
             Console.WriteLine("3.Złodziej");
-            Console.WriteLine("\n");
             Console.Write("Twój wybór: ");
             bool avaiable_choise = false;
             while (!avaiable_choise)

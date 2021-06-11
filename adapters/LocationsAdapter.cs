@@ -11,7 +11,8 @@ namespace RPG.logic_layer
 {
     public class LocationsAdapter
     {
-        readonly string PATH = @"";
+        static readonly string directory= new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
+        readonly string PATH = Path.Combine(directory, @"entities\locations.json");
         readonly EventBuilder eventBuilder;
 
         public LocationsAdapter(EventBuilder eventBuilder)
