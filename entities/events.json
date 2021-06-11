@@ -793,5 +793,49 @@
       }
    ]
   },
+  {
+    "id": 18,
+    "desc": "",
+    "locations": [1, 3, 6, 7, 8],
+    "choices":
+    [
+      {
+        "desc": "Kup przedmiot.",
+        "chance": 0,
+        "flags": [0, 0, 0, 0, 0, 0, 5],
+        "win": "Miałeś we krwi żyłkę hazardową, więc od razu się zgodziłeś. Sklepikarz uciekł z twoim złotem, zanim zdążyłeś się rozmyślić, więc ruszyłeś w dalszy szlak.",
+        "lose": "Ty biedaku nawet złota nie masz - powiedział sklepikarz, a ty ze smutkiem kontynuowałeś swoją podróż.",
+        "statsWin": [0, 0, 0, 0, 0, 0, -20],
+        "statsLose": [0, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [],
+        "buffsLose": [],
+        "item": true
+      },
+      {
+        "desc": "Spróbuj ukraść przedmiot.",
+        "chance": 0.2,
+        "flags": [0, 0, 0.2, 0, 0, 0, 0],
+        "win": "Próba kradzieży zakończyła się powodzeniem. Oddaliłeś się szybko zanim kupiec zdąży się zorientować i ruszyłeś w swoją stronę.",
+        "lose": "Próba kradzieży zakończyła się niepowodzeniem. W momencie, w którym przyuważył cię sklepikarz, dostałeś mocne uderzenie pałką przez łeb. Uciekłeś z podkulonym ogonem.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 0],
+        "statsLose": [0, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [],
+        "buffsLose": [10],
+        "item": true
+      },
+      {
+        "desc": "Nie jesteś zainteresowany.",
+        "chance": 1,
+        "flags": [0, 0, 0.2, 0, 0, 0, 0],
+        "win": "Nie byłeś zainteresowany kupnem przedmiotu u handlarza, ani próbą kradzieży, więc go opuściłeś i kontynuowałeś podróż.",
+        "lose": "Nie byłeś zainteresowany kupnem przedmiotu u handlarza, ani próbą kradzieży, więc go opuściłeś i kontynuowałeś podróż.",
+        "statsWin": [0, 0, 0, 0, 0, 0, 0],
+        "statsLose": [0, 0, 0, 0, 0, 0, 0],
+        "buffsWin": [],
+        "buffsLose": [],
+        "item": false
+      }
+   ]
+  }
 
 ]
