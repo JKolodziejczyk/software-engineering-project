@@ -38,7 +38,6 @@ namespace RPG.logic_layer
         }
         public void show_stats()
         {
-            Console.Clear();
             var stat = player.DisplayStats();
             Console.WriteLine("Atak: {0}",stat[0]);
             Console.WriteLine("Obrona: {0}",stat[1]);
@@ -47,9 +46,6 @@ namespace RPG.logic_layer
             Console.WriteLine("Energia: {0}",stat[4]);
             Console.WriteLine("Psycha: {0}",stat[5]);
             Console.WriteLine("Złoto: {0}",stat[6]);
-            Console.WriteLine("Wciśnij dowolny klawisz by kontynuować.");
-            Console.ReadKey();
-            Console.Clear();
         }
 
         public void showItems() //TODO: Dopisać to jak itemy będą skończone
@@ -58,6 +54,15 @@ namespace RPG.logic_layer
             for(int i = 0; i < items.Length; i++)
             {
                 Console.WriteLine($"Slot {i + 1}. Item{i}");
+            }
+        }
+
+        public void showBuffs()
+        {
+            Buff[] buffs = player.getBuffs();
+            for(int i = 0; i < buffs.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}. {buffs[i].name} efekt: {buffs[i].stats}");
             }
         }
 
@@ -112,8 +117,10 @@ namespace RPG.logic_layer
             printCenter("=====Statystyki=====");
             Console.WriteLine($"Klasa postaci: {player.GetType()}");
             show_stats();
-            Console.WriteLine("Przedmioty:");
+            Console.WriteLine("\nPrzedmioty:");
             showItems();
+            Console.WriteLine("\nAktywne efekty:");
+            showBuffs();
             Console.WriteLine("\n\nNaciśnij dowolny przycisk aby kontynuować...");
             Console.ReadKey();
         }

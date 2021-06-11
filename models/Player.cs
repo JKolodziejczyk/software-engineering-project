@@ -90,6 +90,11 @@ namespace RPG.models
             return res;
         }
 
+        public Buff[] getBuffs()
+        {
+            return _buffs.ToArray();
+        }
+
     }
 
     public class Berserker : Player
