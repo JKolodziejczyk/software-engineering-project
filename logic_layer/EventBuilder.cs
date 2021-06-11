@@ -56,7 +56,14 @@ namespace RPG.logic_layer
         {
             _items = items;
         }
-        
+
+        public void Itemsss()
+        {
+            foreach (var VARIABLE in _items)
+            {
+                Console.WriteLine(VARIABLE._id);
+            }
+        }
         private Location[] chooseLocations(int[] locations)
         {
             Random random = new();

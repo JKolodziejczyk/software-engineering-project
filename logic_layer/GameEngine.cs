@@ -23,6 +23,7 @@ namespace RPG.logic_layer
             EventAdapter events = new(eventBuilder);
             LocationsAdapter locations = new(eventBuilder);
             ItemsAdapter items = new(eventBuilder);
+            items.readData();
         }
 
         public static GameEngine instance 
@@ -68,6 +69,7 @@ namespace RPG.logic_layer
 
         public void newGame()
         {
+            eventBuilder.Itemsss();
             printCenter("=====Nowa Gra=====");
             Console.WriteLine("Wybierz klasę postaci:");
             Console.WriteLine("1.Berserker");
