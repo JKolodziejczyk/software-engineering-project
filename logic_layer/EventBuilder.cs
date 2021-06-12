@@ -17,12 +17,12 @@ namespace RPG.logic_layer
         Item[] _items { get; set; }
         int _playerType { get; set; }
         public Location[] locations { get { return _locations; } }
-        
+
         public EventBase[] events { get { return _events; } }
 
         public BuffBase[] buffs { get { return _buffs; } }
         public Item[] items { get { return _items; } }
-        
+
         private EventBuilder() { }
 
         public static EventBuilder instance
@@ -170,7 +170,7 @@ namespace RPG.logic_layer
             return res;
         }
 
-        public Event deathEvent(int type) //TODO: poprawić to
+        public Event deathEvent(int type)
         {
             EventBase death = _events.Single(_event => _event.id == -1 - type);
             Event res = new Event(death.id, death.desc, null, null);
