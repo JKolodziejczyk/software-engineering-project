@@ -12,14 +12,14 @@ namespace RPG.models
         public float chance { get; }
         public string win { get; }
         public string lose { get; }
-        public float[] statsWin { get; }
-        public float[] statsLose { get; }
+        public int[] statsWin { get; }
+        public int[] statsLose { get; }
         public Buff[] buffsWin { get; }
         public Buff[] buffsLose { get; }
         public float[] flags { get; }
         public Item item { get; }
 
-        public Choice(string desc, float chance, string win, string lose, float[] statsWin, float[] statsLose, Buff[] buffsWin, Buff[] buffsLose, float[] flags, Item item)
+        public Choice(string desc, float chance, string win, string lose, int[] statsWin, int[] statsLose, Buff[] buffsWin, Buff[] buffsLose, float[] flags, Item item)
         {
             this.desc = desc;
             this.chance = chance;

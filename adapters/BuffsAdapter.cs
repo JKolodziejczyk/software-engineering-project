@@ -11,7 +11,8 @@ namespace RPG.logic_layer
 {
     class BuffsAdapter
     {
-        readonly string PATH = @"";
+        static readonly string directory= new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
+        readonly string PATH = Path.Combine(directory, @"entities\buffs.json");
         readonly EventBuilder eventBuilder;
 
         public BuffsAdapter(EventBuilder eventBuilder)

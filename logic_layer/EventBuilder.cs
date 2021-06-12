@@ -15,14 +15,14 @@ namespace RPG.logic_layer
         int lastId = -1;
         BuffBase[] _buffs { get; set; }
         Item[] _items { get; set; }
-
+        int _playerType { get; set; }
         public Location[] locations { get { return _locations; } }
         
         public EventBase[] events { get { return _events; } }
 
         public BuffBase[] buffs { get { return _buffs; } }
-
         public Item[] items { get { return _items; } }
+        
         private EventBuilder() { }
 
         public static EventBuilder instance
@@ -52,20 +52,30 @@ namespace RPG.logic_layer
             _buffs = buffs;
         }
 
+        public void setItems(Item[] items)
+        {
+            _items = items;
+        }
+
+        public void setPlayerType(int type)
+        {
+            _playerType = type;
+        }
+
         private Location[] chooseLocations(int[] locations)
         {
             Random random = new();
             Location[] res = new Location[3];
-
+            int[] currLocations = new int[3];
             for (int i = 0; i < 3; i++)
             {
                 while (true)
                 {
-                    int idLoc = random.Next(locations.Length - 1);
+                    int idLoc = random.Next(locations.Length);
                     bool found = false;
                     for (int j = 0; j < i; j++)
                     {
-                        if (locations[j] == idLoc)
+                        if (currLocations[j] == locations[idLoc])
                         {
                             found = true;
                             break;
@@ -73,14 +83,14 @@ namespace RPG.logic_layer
                     }
                     if (!found)
                     {
-                        locations[i] = idLoc;
+                        currLocations[i] = locations[idLoc];
                         break;
                     }
                 }
             }
             for(int i = 0; i < 3; i++)
             {
-                res[i] = _locations.Single(location => location.id == locations[i]);
+                res[i] = _locations.Single(location => location.id == currLocations[i]);
             }
             return res;
         }
@@ -109,9 +119,16 @@ namespace RPG.logic_layer
                 Buff[] win = findBuffs(curr.buffsWin);
                 Buff[] lose = findBuffs(curr.buffsLose);
                 Item item = null;
-                if (curr.item) //TODO: Filtrowac po klasie
+                if (curr.item)
                 {
-                    item = _items[random.Next(_items.Length - 1)];
+                    item = _items[random.Next(_items.Length)];
+                    while(true)
+                    {
+                        if (_playerType == 1 && (item.owner == 1 || (item.owner == 0 && item.type != 2))) break;
+                        if (_playerType == 2 && (item.owner == 2 || item.owner == 0)) break;
+                        if (_playerType == 3 && (item.owner == 3 || (item.owner == 0 && item.type != 2))) break;
+                        item = _items[random.Next(_items.Length)];
+                    }
                 }
                 res[i] = new Choice(curr.desc, curr.chance, curr.win, curr.lose, curr.statsWin, curr.statsLose, win, lose, curr.flags, item);
             }
@@ -127,7 +144,7 @@ namespace RPG.logic_layer
             Choice[] choices;
             while (true)
             {
-                int id = random.Next(_events.Length - 1);
+                int id = random.Next(_events.Length - 4);
                 if (id != lastId)
                 {
                     EventBase curr = _events.Single(_event => _event.id == id);
@@ -147,7 +164,7 @@ namespace RPG.logic_layer
         public Event initialEvent()
         {
             EventBase start = _events.Single(_event => _event.id == -1);
-            Location location = _locations.Single(location => location.id == start.locations[0]);
+            Location location = _locations.Single(location => location.id == -1);
             Event res = new Event(start.id, start.desc, location, createChoices(start.choices));
             lastId = -1;
             return res;
