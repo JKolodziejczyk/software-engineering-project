@@ -220,7 +220,7 @@ namespace RPG.logic_layer
                 int idx = 0;
                 foreach (Buff buff in buffs)
                 {
-                    Console.WriteLine($"{idx++}. {buff.name}: {buff.getStats()}");
+                    Console.WriteLine($"{++idx}. {buff.name}: {buff.getStats()}");
                 }
                 if (win && choice.item != null)
                 {
