@@ -120,7 +120,7 @@ namespace RPG.models
             item3 = null;
             _class = "Berserker";
             _class_id = 1;
-            stats = new int[] {25, 15, 20, statrandomizer.Next(80,100),statrandomizer.Next(60,100),statrandomizer.Next(50,100), 500};
+            stats = new int[] {25, 15, 20, statrandomizer.Next(80,100),statrandomizer.Next(60,100),statrandomizer.Next(50,100), 0};
             _buffs = new();
         }
 
@@ -168,7 +168,7 @@ namespace RPG.models
             {
                 case 0:
                 {
-                    if (new_item is Weapon item) 
+                    if (new_item is Weapon item)
                     {
                         item1 =item;
                     }
@@ -368,5 +368,5 @@ namespace RPG.models
             }
         }
     }
-    
+
 }
