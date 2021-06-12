@@ -8,12 +8,18 @@ namespace RPG.models
 {
     public abstract class Item
     {
-        public int _id { get; set; }
-        public int[] _stats { get; set; }
-        public string _name { get; set; }
+        protected int _id { get; set; }
+        protected int[] _stats { get; set; }
+        protected string _name { get; set; }
         protected int _owner { get; set; }
-        public int _type { get; set; }
+        protected int _type { get; set; }
+
         public int owner { get { return _owner; } }
+        public int type { get { return _type; } }
+        public int id { get { return _id; } }
+        public int[] stats { get { return _stats; } }
+        public string name { get { return _name; } }
+
         public string getType()
         {
             if (_type == 1) return "Broń";

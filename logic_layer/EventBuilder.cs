@@ -66,7 +66,7 @@ namespace RPG.logic_layer
         {
             Random random = new();
             Location[] res = new Location[3];
-
+            int[] currLocations = new int[3];
             for (int i = 0; i < 3; i++)
             {
                 while (true)
@@ -75,7 +75,7 @@ namespace RPG.logic_layer
                     bool found = false;
                     for (int j = 0; j < i; j++)
                     {
-                        if (locations[j] == idLoc)
+                        if (currLocations[j] == locations[idLoc])
                         {
                             found = true;
                             break;
@@ -83,14 +83,14 @@ namespace RPG.logic_layer
                     }
                     if (!found)
                     {
-                        locations[i] = idLoc;
+                        currLocations[i] = locations[idLoc];
                         break;
                     }
                 }
             }
             for(int i = 0; i < 3; i++)
             {
-                res[i] = _locations.Single(location => location.id == locations[i]);
+                res[i] = _locations.Single(location => location.id == currLocations[i]);
             }
             return res;
         }
@@ -122,8 +122,11 @@ namespace RPG.logic_layer
                 if (curr.item)
                 {
                     item = _items[random.Next(_items.Length)];
-                    while(item.owner != 0 && item.owner != _playerType)
+                    while(true)
                     {
+                        if (_playerType == 1 && (item.owner == 1 || (item.owner == 0 && item.type != 2))) break;
+                        if (_playerType == 2 && (item.owner == 2 || item.owner == 0)) break;
+                        if (_playerType == 3 && (item.owner == 3 || (item.owner == 0 && item.type != 2))) break;
                         item = _items[random.Next(_items.Length)];
                     }
                 }

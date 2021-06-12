@@ -66,15 +66,11 @@ namespace RPG.models
                 for (int i = 0; i < 6; i++) stats[i] += elem.stats[i];
                 elem.decrement_time();
             }
+            Expiring_buffs();
             stats_min_max();
         }
 
-        public void end_event()
-        {
-            Expiring_buffs();
-            apply_buffs();
-        }
-        public abstract bool Change_item(Item new_item, int which_slot);
+        public abstract void Change_item(Item new_item, int which_slot);
 
         public int[] getStats()
         {
@@ -85,29 +81,24 @@ namespace RPG.models
             }
             if (item1 != null)
             {
-                for (var i = 0; i < 3; i++) Current[i] += item1._stats[i];
+                for (var i = 0; i < 3; i++) Current[i] += item1.stats[i];
             }
             if (item2 != null)
             {
-                for (var i = 0; i < 3; i++) Current[i] += item2._stats[i];
+                for (var i = 0; i < 3; i++) Current[i] += item2.stats[i];
             }
             if (item3 != null)
             {
-                for (var i = 0; i < 3; i++) Current[i] += item3._stats[i];
+                for (var i = 0; i < 3; i++) Current[i] += item3.stats[i];
             }
             return Current;
         }
 
-        public Item[] getItems()
-        {
-            Item[] res = new Item[3];
-            res[0] = item1;
-            res[1] = item2;
-            res[2] = item3;
-            return res;
-        }
+        public abstract Item[] getItems();
 
-        public abstract string[] getSlotTypes();
+        public abstract string[] getSlotTypesName();
+
+        public abstract int[] getSlotTypes();
 
         public Buff[] getBuffs()
         {
@@ -129,7 +120,7 @@ namespace RPG.models
             item3 = null;
             _class = "Berserker";
             _class_id = 1;
-            stats = new int[] {25, 15, 20, statrandomizer.Next(80,100),statrandomizer.Next(60,100),statrandomizer.Next(50,100),0};
+            stats = new int[] {25, 15, 20, statrandomizer.Next(80,100),statrandomizer.Next(60,100),statrandomizer.Next(50,100), 500};
             _buffs = new();
         }
 
@@ -150,51 +141,54 @@ namespace RPG.models
             if (stats[6] < 0) stats[6] = 0;
         }
 
-        public override string[] getSlotTypes()
+        public override string[] getSlotTypesName()
         {
             string[] res = { "Broń", "Broń", "Szczęśliwe" };
             return res;
         }
 
-        public override bool Change_item(Item new_item, int which_slot)
+        public override int[] getSlotTypes()
+        {
+            int[] res = { 1, 1, 3 };
+            return res;
+        }
+
+        public override Item[] getItems()
+        {
+            Item[] res = new Item[3];
+            res[0] = item1;
+            res[1] = item2;
+            res[2] = item3;
+            return res;
+        }
+
+        public override void Change_item(Item new_item, int which_slot)
         {
             switch (which_slot)
             {
-                case 1:
+                case 0:
                 {
                     if (new_item is Weapon item) 
                     {
                         item1 =item;
-                        return true;
                     }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
+                        break;
                 }
-                case 2:
+                case 1:
                 {
                     if (new_item is Weapon item)
                     {
                         item2=item;
-                        return true;
                     }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
+                        break;
                 }
-                case 3:
+                case 2:
                 {
                     if (new_item is Lucky item)
                     {
                         item3=item;
-                        return true;
                     }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
-                }
-                case 0:
-                    return true;
-                default:
-                {
-                    throw new InvalidOperationException();
+                        break;
                 }
             }
         }
@@ -235,52 +229,55 @@ namespace RPG.models
             if (stats[6] < 0) stats[6] = 0;
         }
 
-        public override string[] getSlotTypes()
+        public override Item[] getItems()
+        {
+            Item[] res = new Item[3];
+            res[0] = item1;
+            res[1] = item2;
+            res[2] = item3;
+            return res;
+        }
+
+        public override string[] getSlotTypesName()
         {
             string[] res = { "Broń", "Pancerz", "Szczęśliwe" };
             return res;
         }
 
-        public override bool Change_item(Item new_item, int which_slot)
+        public override int[] getSlotTypes()
+        {
+            int[] res = { 1, 2, 3 };
+            return res;
+        }
+
+        public override void Change_item(Item new_item, int which_slot)
         {
             switch (which_slot)
             {
-                case 1:
-                {
-                    if (new_item is Weapon item) 
-                    {
-                        item1 =item;
-                        return true;
-                    }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
-                }
-                case 2:
-                {
-                    if (new_item is Armor item)
-                    {
-                        item2=item;
-                        return true;
-                    }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
-                }
-                case 3:
-                {
-                    if (new_item is Lucky item)
-                    {
-                        item3=item;
-                        return true;
-                    }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
-                }
                 case 0:
-                    return true;
-                default:
-                {
-                    throw new InvalidOperationException();
-                }
+                    {
+                        if (new_item is Weapon item)
+                        {
+                            item1 = item;
+                        }
+                        break;
+                    }
+                case 1:
+                    {
+                        if (new_item is Armor item)
+                        {
+                            item2 = item;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (new_item is Lucky item)
+                        {
+                            item3 = item;
+                        }
+                        break;
+                    }
             }
         }
     }
@@ -319,52 +316,55 @@ namespace RPG.models
             if (stats[6] < 0) stats[6] = 0;
         }
 
-        public override string[] getSlotTypes()
+        public override string[] getSlotTypesName()
         {
             string[] res = { "Broń", "Szczęśliwe", "Szczęśliwe" };
             return res;
         }
 
-        public override bool Change_item(Item new_item, int which_slot)
+        public override Item[] getItems()
+        {
+            Item[] res = new Item[3];
+            res[0] = item1;
+            res[1] = item2;
+            res[2] = item3;
+            return res;
+        }
+
+        public override int[] getSlotTypes()
+        {
+            int[] res = { 1, 3, 3 };
+            return res;
+        }
+
+        public override void Change_item(Item new_item, int which_slot)
         {
             switch (which_slot)
             {
-                case 1:
-                {
-                    if (new_item is Weapon item) 
-                    {
-                        item1 =item;
-                        return true;
-                    }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
-                }
-                case 2:
-                {
-                    if (new_item is Lucky item)
-                    {
-                        item2=item;
-                        return true;
-                    }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
-                }
-                case 3:
-                {
-                    if (new_item is Lucky item)
-                    {
-                        item3=item;
-                        return true;
-                    }
-                    Console.WriteLine("Wybrałeś zły slot");
-                    return false;
-                }
                 case 0:
-                    return true;
-                default:
-                {
-                    throw new InvalidOperationException();
-                }
+                    {
+                        if (new_item is Weapon item)
+                        {
+                            item1 = item;
+                        }
+                        break;
+                    }
+                case 1:
+                    {
+                        if (new_item is Lucky item)
+                        {
+                            item2 = item;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (new_item is Lucky item)
+                        {
+                            item3 = item;
+                        }
+                        break;
+                    }
             }
         }
     }

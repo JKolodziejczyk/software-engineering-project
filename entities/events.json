@@ -184,8 +184,8 @@
                 "desc": "Chcę dostać losowy przedmiot.",
                 "chance": 1,
                 "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
-                "win": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
-                "lose": "Dżin rzucił zaklęcie i poszedł w swoją stronę, a ty poczułeś pozytywną zmianę w swoim ciele.",
+                "win": "Dżin rzucił zaklęcie i w twoich rękach pojawił się świecący się nowy przedmiot.",
+                "lose": "",
                 "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
                 "statsLose": [ 0, 0, 0, 0, 0, 0, 0 ],
                 "buffsWin": [],
@@ -671,13 +671,13 @@
                 "desc": "Przyłącz się do nich jako ich kompan do picia.",
                 "chance": 0.25,
                 "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
-                "win": "Wyciągnąłeś własną butelkę i poczęstowałeś kompanów. Spędziłeś resztę wieczoru słuchając rozmaitych plotek i opowieści. Po zabawie zostawiłeś towarzyszy i udałeś się w swoją stronę.",
+                "win": "Wyciągnąłeś własną butelkę i poczęstowałeś kompanów. Spędziłeś resztę wieczoru słuchając rozmaitych plotek i opowieści. Po zabawie zostawiłeś towarzyszy, okradłeś ich i udałeś się w swoją stronę.",
                 "lose": "Wyciągnąłeś własną butelkę i poczęstowałeś kompanów. Spędziłeś resztę wieczoru słuchając rozmaitych plotek i opowieści. Po zabawie zostawiłeś towarzyszy i udałeś się w swoją stronę, jednakże jak odszedłeś to zorientowałeś się, że w twoim mieszku brakuje nieco złota.",
                 "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
                 "statsLose": [ 0, 0, -5, 0, 0, 0, -10 ],
                 "buffsWin": [ 1, 2, 3, 11 ],
                 "buffsLose": [ 11, 12 ],
-                "item": false
+                "item": true
             }
         ]
     },
@@ -776,13 +776,13 @@
     },
     {
         "id": 18,
-        "desc": "",
+        "desc": "Nagle napotykasz sklepikarza.",
         "locations": [ 1, 3, 6, 7, 8 ],
         "choices": [
             {
                 "desc": "Kup przedmiot.",
-                "chance": 0,
-                "flags": [ 0, 0, 0, 0, 0, 0, 5 ],
+                "chance": -0.2,
+                "flags": [ 0, 0, 0, 0, 0, 0, 1 ],
                 "win": "Miałeś we krwi żyłkę hazardową, więc od razu się zgodziłeś. Sklepikarz uciekł z twoim złotem, zanim zdążyłeś się rozmyślić, więc ruszyłeś w dalszy szlak.",
                 "lose": "Ty biedaku nawet złota nie masz - powiedział sklepikarz, a ty ze smutkiem kontynuowałeś swoją podróż.",
                 "statsWin": [ 0, 0, 0, 0, 0, 0, -20 ],
@@ -806,7 +806,7 @@
             {
                 "desc": "Nie jesteś zainteresowany.",
                 "chance": 1,
-                "flags": [ 0, 0, 0.2, 0, 0, 0, 0 ],
+                "flags": [ 0, 0, 0, 0, 0, 0, 0 ],
                 "win": "Nie byłeś zainteresowany kupnem przedmiotu u handlarza, ani próbą kradzieży, więc go opuściłeś i kontynuowałeś podróż.",
                 "lose": "Nie byłeś zainteresowany kupnem przedmiotu u handlarza, ani próbą kradzieży, więc go opuściłeś i kontynuowałeś podróż.",
                 "statsWin": [ 0, 0, 0, 0, 0, 0, 0 ],
